@@ -9,15 +9,15 @@ import estimator_model
 VOCAB_FILE_PATH = None  # set in train_and_eval function
 PADWORD = "ZYXW"
 MAX_SEQUENCE_LENGTH = 500
-TOP_K = 25000
+TOP_K = 30000
 
 def load_data(path):
     columns = ('transcription', 'Target')
     train_df = pd.read_csv(path+'training_dataset.csv', names=columns)
     eval_df = pd.read_csv(path+'evaluation_dataset.csv', names=columns)
 
-    return((list(train_df['transcription']), np.array(train_df['Target']),
-            list(eval_df['transcription']), np.array(eval_df['Target'])))
+    return((list(train_df['transcription']), np.array(train_df['Target'])),
+            (list(eval_df['transcription']), np.array(eval_df['Target'])))
 
 def vectorize_sentences(text_tensor):
     # remove punctuation
@@ -103,7 +103,7 @@ def input_function(texts, labels, batch_size, mode):
     return dataset
 
 
-def cnn_estimator(model_dir, config, learning_rate, word_index, embedding_path=None, embedding_dim=200):
+def cnn_estimator(model_dir, config, learning_rate, word_index=None, embedding_path=None, embedding_dim=200):
     optimizer = Adam(lr=learning_rate)
     input_dim = min(len(word_index), TOP_K)
 
@@ -123,5 +123,27 @@ def cnn_estimator(model_dir, config, learning_rate, word_index, embedding_path=N
 
 def train_and_evaluate(output_dir, hparams):
     # Main orchastrator of training and evaluation by calling models from estimator_model.py
-    
+
+    tf.summary.FileWriterCache.clear()
+    ((train_text, train_label), (eval_text, eval_label)) = load_data("warehouse/store/")
+
+    # Create vocabulary from training corpus 
+    tokenizer = text.Tokenizer(num_words=TOP_K)
+    tokenizer.fit_on_texts(train_text)
+
+    # Create estimator 
+    run_config = tf.estimator.RunConfig(save_checkpoints_steps=500)
+    estimator = cnn_estimator(output_dir, run_config,
+                                hparams['learning_rate'],
+                                word_index=tokenizer.word_index,
+                                embedding_path=hparams['embedding_path'])
+
+    train_steps = hparams['num_epochs'] * len(train_text) / hparams['batch_size']
+    train_spec = tf.estimator.TrainSpec(input_fn=lambda:input_function(train_text, train_label, 
+            hparams['batch_size'], mode=tf.estimator.ModeKeys.TRAIN), max_steps=train_steps)
+
+    eval_spec = tf.estimator.EvalSpec(input_fn=lambda:input_function(eval_text, eval_label, hparams['batch_size'], mode=tf.estimator.ModeKeys.EVAL), 
+            steps=None, start_delay_secs=5)
+
+    tf.estimator.train_and_evaluate(estimator, train_spec, eval_spec)
     return True
