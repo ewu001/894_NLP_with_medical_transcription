@@ -5,68 +5,22 @@ import pandas as pd
 import numpy as np
 import logging
 import datetime
-
-from keras.preprocessing import sequence, text
-import estimator_model
 import keras
 
+import estimator_model
+import utility
+
+
+'''
+Hyperparameter configuration section
+'''
 CLASSES = {'1.0': 1, '2.0': 0}
-VOCAB_FILE_PATH = None  # set in train_and_eval function
-PADWORD = "ZYXW"
-MAX_SEQUENCE_LENGTH = 500
-TOP_K = 50000
-EMBEDDING_DIM = 200
 EVAL_INTERVAL = 50
+# These values will come from command line argument
+MAX_SEQUENCE_LENGTH = None
+VOCAB_SIZE = None
+EMBEDDING_DIM = None
 
-def load_data(path):
-    columns = ('transcription', 'Target')
-    train_df = pd.read_csv(path+'training_dataset.csv', names=columns)
-    eval_df = pd.read_csv(path+'evaluation_dataset.csv', names=columns)
-
-    train_Y = train_df['Target'].iloc[1:].map(CLASSES)
-    eval_Y = eval_df['Target'].iloc[1:].map(CLASSES)
-
-    print(train_Y.unique())
-    one_hot_train_Y = tf.keras.utils.to_categorical(train_Y)
-    one_hot_eval_Y = tf.keras.utils.to_categorical(eval_Y)
-
-    print(one_hot_train_Y.shape)
-    print(one_hot_eval_Y.shape)
-
-    return((list(train_df['transcription'].iloc[1:].astype(str)), one_hot_train_Y),
-            (list(eval_df['transcription'].iloc[1:].astype(str)), one_hot_eval_Y))
-
-
-def get_embedding(embedding_path):
-    # This function will read the pretrained embedding from file and prepare embedding look up
-
-    embedding_matrix_all = {}
-
-    # prepare embedding matrix
-    with open(embedding_path, encoding="utf8") as e_file:
-        for line in e_file:
-            values = line.split()
-            word = values[0]
-            coefficient = np.asarray(values[1:], dtype='float32')
-            embedding_matrix_all[word] = coefficient
-    return embedding_matrix_all
-
-def get_sentence_level_embedding(word_index, matrix, embedding_dim):
-    # This function will get word to word vector mapping from embedding look up 
-
-    num_words = min(len(word_index)+1, TOP_K)
-    embedding_matrix = np.zeros((num_words, embedding_dim))
-
-    # prepare embedding matrix
-    for word, index in word_index.items():
-        if index > TOP_K:
-            continue
-        else:
-            embedding_vector = matrix.get(word)
-            if embedding_vector is not None:
-                embedding_matrix[index] = embedding_vector
-
-    return embedding_matrix
 
 def input_function(texts, labels, tokenizer, batch_size, mode):
     # Transform sentence to sequence of integers
@@ -94,12 +48,12 @@ def auc(y_true, y_pred):
 
 def cnn_estimator(model_dir, config, learning_rate, embedding_dim, word_index=None, embedding_path=None):
 
-    input_dim = min(len(word_index)+1, TOP_K)
+    input_dim = min(len(word_index)+1, VOCAB_SIZE)
 
 
     if embedding_path != None:
-        matrix = get_embedding(embedding_path)
-        embedding_matrix = get_sentence_level_embedding(word_index, matrix, embedding_dim)
+        matrix = utility.get_embedding(embedding_path)
+        embedding_matrix = utility.get_sentence_level_embedding(word_index, matrix, embedding_dim, VOCAB_SIZE)
     else:
         embedding_matrix = None
     
@@ -123,11 +77,11 @@ def train_and_evaluate(output_dir, hparams):
     filename = 'training log/train_estimator_log_' + date_string + '.txt'
     logging.basicConfig(filename=filename, level=20)
 
-    ((train_text, train_label), (eval_text, eval_label)) = load_data("warehouse/store/")
+    ((train_text, train_label), (eval_text, eval_label)) = utility.load_data("warehouse/store/", CLASSES)
 
 
     # Create vocabulary from training corpus 
-    tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=TOP_K)
+    tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=VOCAB_SIZE)
     tokenizer.fit_on_texts(train_text)
 
     # Create estimator config

@@ -38,10 +38,28 @@ if __name__ == '__main__':
         default=0.00001,
         type=float
     )
+    parser.add_argument(
+        '--vocab_size',
+        help='set the size limit of text corpus used on the tokenization for sentence vocabulary',
+        default=50000,
+        type=int
+    )
+    parser.add_argument(
+        '--max_sequence_length',
+        help='set the limit of maximum sequence length used for padding',
+        default=300,
+        type=int
+    )
+
 
     args, _ = parser.parse_known_args()
     hparams = args.__dict__
     output_dir = hparams.pop('output_dir')
+
+    estimator_factory.MAX_SEQUENCE_LENGTH = hparams.pop('max_sequence_length')
+    estimator_factory.VOCAB_SIZE= hparams.pop('vocab_size')
+    estimator_factory.EMBEDDING_DIM= hparams.pop('embedding_dim')
+    
 
     # Initialize the training and evaluation
     print(tempfile.gettempdir())
