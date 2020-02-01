@@ -1,5 +1,6 @@
 import argparse
 import estimator_factory
+import tempfile
 
 if __name__ == '__main__':
     # parse command line argument for hyper parameter input
@@ -11,8 +12,13 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '--embedding_path',
-        help='Optional, path to the embedding location',
-        default='embedding/glove.6B.50d.txt'
+        help='Optional, path to the embedding location'
+    )
+    parser.add_argument(
+        '--embedding_dim',
+        help='Optional, the dimension of the embedding to be used, if pre trained embedding is specified, should match with the embedding',
+        type=int,
+        default=200
     )
     parser.add_argument(
         '--num_epochs',
@@ -29,7 +35,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--learning_rate',
         help='learning rate for gradient descent, required for model train',
-        default=0.01,
+        default=0.00001,
         type=float
     )
 
@@ -38,4 +44,5 @@ if __name__ == '__main__':
     output_dir = hparams.pop('output_dir')
 
     # Initialize the training and evaluation
+    print(tempfile.gettempdir())
     estimator_factory.train_and_evaluate(output_dir, hparams)
