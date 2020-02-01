@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+import os
 
 def target_encoding(row):
     '''
@@ -109,8 +111,12 @@ def target_encoding(row):
         row.Target = 1 
     return row
 
+if __name__ == '__main__':
 
-rawdf = pd.read_csv('lake/medical_transcription_data_raw.csv')
-rawdf['Target'].fillna(value=0, inplace=True)
-newdf = rawdf.apply(target_encoding, axis=1)
-newdf.to_csv('warehouse/medical_transcription_data_overall.csv')
+    rawdf = pd.read_csv(os.path.join(os.path.dirname(__file__), "../lake/medical_transcription_data_raw.csv"))
+    print('extract raw data from lake')
+    #rawdf['Target'].fillna(value=0, inplace=True)
+    rawdf['Target'] = np.zeros((rawdf.shape[0],1))
+    newdf = rawdf.apply(target_encoding, axis=1)
+    newdf.to_csv(os.path.join(os.path.dirname(__file__), '../warehouse/medical_transcription_data_overall.csv'))
+    print('loaded processed data to warehouse')

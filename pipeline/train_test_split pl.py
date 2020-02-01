@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import math
+import os
 
 from sklearn.utils import shuffle
 
@@ -41,4 +42,7 @@ def eval_train_generator(path, target, split_ratio, upper_bound=None):
     print("Completed")
     return True
 
-eval_train_generator("warehouse/keyword_target_data.csv", "Target", 0.05)
+if __name__ == '__main__':
+    path = os.path.join(os.path.dirname(__file__), "../warehouse/keyword_target_data.csv")
+    split_ratio = 0.02
+    eval_train_generator(path, "Target", split_ratio)
