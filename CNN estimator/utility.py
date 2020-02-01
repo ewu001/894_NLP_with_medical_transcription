@@ -1,6 +1,7 @@
 import pandas as pd
 import tensorflow as tf
 import numpy as np
+import os
 
 def load_data(path, classes):
     columns = ('transcription', 'Target')
@@ -20,7 +21,13 @@ def load_data(path, classes):
     return((list(train_df['transcription'].iloc[1:].astype(str)), one_hot_train_Y),
             (list(eval_df['transcription'].iloc[1:].astype(str)), one_hot_eval_Y))
 
+def load_eval_data_for_pred(path, classes):
+    columns = ('transcription', 'Target')
+    eval_df = pd.read_csv(path+'evaluation_dataset.csv', names=columns)
 
+    eval_Y = eval_df['Target'].iloc[1:].map(classes)
+
+    return (list(eval_df['transcription'].iloc[1:].astype(str)), np.asarray(eval_Y))
 
 def get_embedding(embedding_path):
     # This function will read the pretrained embedding from file and prepare embedding look up

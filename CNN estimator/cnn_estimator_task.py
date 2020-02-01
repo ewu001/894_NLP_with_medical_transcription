@@ -1,5 +1,5 @@
 import argparse
-import estimator_factory
+import cnn_estimator_factory
 import tempfile
 
 if __name__ == '__main__':
@@ -56,11 +56,10 @@ if __name__ == '__main__':
     hparams = args.__dict__
     output_dir = hparams.pop('output_dir')
 
-    estimator_factory.MAX_SEQUENCE_LENGTH = hparams.pop('max_sequence_length')
-    estimator_factory.VOCAB_SIZE= hparams.pop('vocab_size')
-    estimator_factory.EMBEDDING_DIM= hparams.pop('embedding_dim')
+    cnn_estimator_factory.MAX_SEQUENCE_LENGTH = hparams.pop('max_sequence_length')
+    cnn_estimator_factory.VOCAB_SIZE= hparams.pop('vocab_size')
+    cnn_estimator_factory.EMBEDDING_DIM= hparams.pop('embedding_dim')
     
 
     # Initialize the training and evaluation
-    print(tempfile.gettempdir())
-    estimator_factory.train_and_evaluate(output_dir, hparams)
+    cnn_estimator_factory.train_and_evaluate(output_dir, hparams)

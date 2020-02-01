@@ -1,4 +1,6 @@
 import os
+import sys
+
 import shutil
 import tensorflow as tf
 import pandas as pd
@@ -6,8 +8,9 @@ import numpy as np
 import logging
 import datetime
 import keras
+import pickle
 
-import estimator_model
+import cnn_estimator_model
 import utility
 
 
@@ -15,7 +18,7 @@ import utility
 Hyperparameter configuration section
 '''
 CLASSES = {'1.0': 1, '2.0': 0}
-EVAL_INTERVAL = 50
+EVAL_INTERVAL = 100
 # These values will come from command line argument
 MAX_SEQUENCE_LENGTH = None
 VOCAB_SIZE = None
@@ -62,7 +65,7 @@ def cnn_estimator(model_dir, config, learning_rate, embedding_dim, word_index=No
     else:
         embedding_matrix = None
     
-    cnnmodel = estimator_model.cnn_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim,
+    cnnmodel = cnn_estimator_model.cnn_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim,
                                 embedding=embedding_matrix, word_index=word_index)
 
 
@@ -87,6 +90,9 @@ def train_and_evaluate(output_dir, hparams):
     # Create vocabulary from training corpus 
     tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=VOCAB_SIZE)
     tokenizer.fit_on_texts(train_text)
+
+    # Save token dictionary to use during prediction time
+    pickle.dump(tokenizer, open('cnn_tokenizer.pickled', 'wb'))
 
     # Create estimator config
     run_config = tf.estimator.RunConfig(save_checkpoints_steps=EVAL_INTERVAL,
