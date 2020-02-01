@@ -42,9 +42,14 @@ def input_function(texts, labels, tokenizer, batch_size, mode):
         x=sentence_token, y=labels, batch_size=batch_size, num_epochs=num_epochs, shuffle=shuffle
     )
 
-def auc(y_true, y_pred):
-    auc = tf.metrics.auc(y_true, y_pred)[1]
-    return auc
+
+def serving_input_fn():
+    # Defines the features to be passed to the model during inference 
+    # Expects already tokenized and padded representation of sentences
+
+    feature_placeholder = tf.placeholder(tf.int16, [None, MAX_SEQUENCE_LENGTH])
+    features = feature_placeholder
+    return tf.estimator.export.TensorServingInputReceiver(features, feature_placeholder)
 
 def cnn_estimator(model_dir, config, learning_rate, embedding_dim, word_index=None, embedding_path=None):
 
@@ -67,9 +72,8 @@ def cnn_estimator(model_dir, config, learning_rate, embedding_dim, word_index=No
     return estimator
 
 def train_and_evaluate(output_dir, hparams):
-    print("learning rate: ", hparams['learning_rate'])
     # Main orchastrator of training and evaluation by calling models from estimator_model.py
-    shutil.rmtree('model_dir', ignore_errors = True)
+    shutil.rmtree(output_dir, ignore_errors = True)
     tf.compat.v1.summary.FileWriterCache.clear()
 
     # Set log configuration, export to local file
@@ -99,8 +103,12 @@ def train_and_evaluate(output_dir, hparams):
     train_spec = tf.estimator.TrainSpec(input_fn=input_function(train_text, train_label, tokenizer,
             hparams['batch_size'], mode=tf.estimator.ModeKeys.TRAIN), max_steps=train_steps)
 
+    # Create exporter configuration
+    exporter = tf.estimator.LatestExporter('exporter', serving_input_fn)
     eval_spec = tf.estimator.EvalSpec(input_fn=input_function(eval_text, eval_label, tokenizer,
-            hparams['batch_size'], mode=tf.estimator.ModeKeys.EVAL), steps=None, 
+            hparams['batch_size'], mode=tf.estimator.ModeKeys.EVAL), 
+            steps=None, 
+            exporters=exporter,
             start_delay_secs=10,
             throttle_secs = EVAL_INTERVAL)  # evaluate every N seconds
 
