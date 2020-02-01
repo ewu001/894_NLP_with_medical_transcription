@@ -46,3 +46,13 @@ CNN estimator/training log/train_estimator_log_0131_2218.txt
 CNN estimator/training log/train_estimator_log_0131_2226.txt
 CNN estimator/training log/train_estimator_log_0131_2233.txt
 CNN estimator/training log/train_estimator_log_0131_2240.txt
+CNN estimator/cnnmodel_dir/eval/events.out.tfevents.1580529191.LAPTOP-42K07IEA
+CNN estimator/cnnmodel_dir/events.out.tfevents.1580529179.LAPTOP-42K07IEA
+CNN estimator/cnnmodel_dir/export/exporter/1580529192/saved_model.pb
+CNN estimator/cnnmodel_dir/export/exporter/1580529192/variables/variables.data-00000-of-00001
+CNN estimator/cnnmodel_dir/export/exporter/1580529192/variables/variables.index
+CNN estimator/cnnmodel_dir/export/exporter/1580529240/saved_model.pb
+CNN estimator/cnnmodel_dir/export/exporter/1580529240/variables/variables.data-00000-of-00001
+CNN estimator/cnnmodel_dir/export/exporter/1580529240/variables/variables.index
+CNN estimator/training log/train_estimator_log_0131_2248.txt
+CNN estimator/training log/train_estimator_log_0131_2252.txt
