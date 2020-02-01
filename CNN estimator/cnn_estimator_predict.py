@@ -3,17 +3,21 @@ import tensorflow as tf
 import pandas as pd
 import keras
 import utility
+import pathlib
 
 
 MAX_SEQUENCE_LENGTH = 500
-export_model_path = 'cnnmodel_dir/export/exporter/1580528520'
+export_model_path = 'cnnmodel_dir/export/exporter/1580579736'
 
 def accuracy_percentage(x, y):
     return (100.0 * len(set(x) & set(y))) / len(set(x) | set(y))
 
 if __name__ == '__main__':
     # Tokenize and pad sentences using same mapping used in the trained estimator model
-    tokenizer = pickle.load( open( "tokenizer.pickled", "rb" ) )
+    #abspath = pathlib.Path('tokenizer.pickle').absolute()
+    with open('tokenizer.pickle', 'rb') as handle:
+        tokenizer = pickle.load(handle)
+    #tokenizer = pickle.load( open( "tokenizer.pickled", "rb" ) )
 
     # load eval data to predict
     (eval_text, eval_label) = utility.load_eval_data_for_pred("warehouse/store/", {'1.0': 1, '2.0': 0})

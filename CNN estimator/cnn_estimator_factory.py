@@ -92,7 +92,9 @@ def train_and_evaluate(output_dir, hparams):
     tokenizer.fit_on_texts(train_text)
 
     # Save token dictionary to use during prediction time
-    pickle.dump(tokenizer, open('tokenizer.pickled', 'wb'))
+    # saving
+    with open('tokenizer.pickle', 'wb') as handle:
+        pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
     # Create estimator config
     run_config = tf.estimator.RunConfig(save_checkpoints_steps=EVAL_INTERVAL,

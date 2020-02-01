@@ -5,8 +5,11 @@ import os
 
 def load_data(path, classes):
     columns = ('transcription', 'Target')
-    train_df = pd.read_csv(path+'training_dataset.csv', names=columns)
-    eval_df = pd.read_csv(path+'evaluation_dataset.csv', names=columns)
+    train_df_path = os.path.join(os.path.dirname(__file__), '../'+path+'training_dataset.csv')
+    eval_df_path = os.path.join(os.path.dirname(__file__), '../'+path+'evaluation_dataset.csv')
+
+    train_df = pd.read_csv(train_df_path, names=columns)
+    eval_df = pd.read_csv(eval_df_path, names=columns)
 
     train_Y = train_df['Target'].iloc[1:].map(classes)
     eval_Y = eval_df['Target'].iloc[1:].map(classes)
@@ -23,7 +26,8 @@ def load_data(path, classes):
 
 def load_eval_data_for_pred(path, classes):
     columns = ('transcription', 'Target')
-    eval_df = pd.read_csv(path+'evaluation_dataset.csv', names=columns)
+    eval_df_path = os.path.join(os.path.dirname(__file__), '../'+path+'evaluation_dataset.csv')
+    eval_df = pd.read_csv(eval_df_path, names=columns)
 
     eval_Y = eval_df['Target'].iloc[1:].map(classes)
 
@@ -35,7 +39,7 @@ def get_embedding(embedding_path):
     embedding_matrix_all = {}
 
     # prepare embedding matrix
-    with open(embedding_path, encoding="utf8") as e_file:
+    with open(os.path.join(os.path.dirname(__file__), '../'+embedding_path), encoding="utf8") as e_file:
         for line in e_file:
             values = line.split()
             word = values[0]
