@@ -71,3 +71,54 @@ CNN estimator/training log/train_estimator_log_0201_1251.txt
 CNN estimator/training log/train_estimator_log_0201_1254.txt
 embedding/glove.6B.200d.txt
 embedding/glove.6B.50d.txt
+estimator CNN/training log/train_estimator_log_0201_1254.txt
+estimator CNN/training log/train_estimator_log_0201_1251.txt
+estimator CNN/training log/train_estimator_log_0131_2252.txt
+estimator CNN/training log/train_estimator_log_0131_2248.txt
+estimator CNN/training log/train_estimator_log_0131_2240.txt
+estimator CNN/training log/train_estimator_log_0131_2233.txt
+estimator CNN/training log/train_estimator_log_0131_2226.txt
+estimator CNN/training log/train_estimator_log_0131_2218.txt
+estimator CNN/training log/train_estimator_log_0131_2213.txt
+estimator CNN/training log/train_estimator_log_0131_2211.txt
+estimator CNN/training log/train_estimator_log_0131_2206.txt
+estimator CNN/training log/train_estimator_log_0131_2204.txt
+estimator CNN/training log/train_estimator_log_0131_2203.txt
+estimator CNN/training log/train_estimator_log_0131_2201.txt
+estimator CNN/training log/train_estimator_log_0131_2107.txt
+estimator CNN/training log/train_estimator_log_0131_2100.txt
+estimator CNN/training log/train_estimator_log_0131_2056.txt
+estimator CNN/training log/train_estimator_log_0131_2042.txt
+estimator CNN/training log/train_estimator_log_0131_2028.txt
+estimator CNN/training log/train_estimator_log_0131_2027.txt
+estimator CNN/training log/train_estimator_log_0131_1959.txt
+estimator CNN/training log/train_estimator_log_0131_1145.txt
+estimator CNN/cnnmodel_dir/model.ckpt-529.meta
+estimator CNN/cnnmodel_dir/model.ckpt-529.index
+estimator CNN/cnnmodel_dir/model.ckpt-529.data-00000-of-00001
+estimator CNN/cnnmodel_dir/model.ckpt-500.meta
+estimator CNN/cnnmodel_dir/model.ckpt-500.index
+estimator CNN/cnnmodel_dir/model.ckpt-500.data-00000-of-00001
+estimator CNN/cnnmodel_dir/model.ckpt-400.meta
+estimator CNN/cnnmodel_dir/model.ckpt-400.index
+estimator CNN/cnnmodel_dir/model.ckpt-400.data-00000-of-00001
+estimator CNN/cnnmodel_dir/model.ckpt-300.meta
+estimator CNN/cnnmodel_dir/model.ckpt-300.index
+estimator CNN/cnnmodel_dir/model.ckpt-300.data-00000-of-00001
+estimator CNN/cnnmodel_dir/model.ckpt-200.meta
+estimator CNN/cnnmodel_dir/model.ckpt-200.index
+estimator CNN/cnnmodel_dir/model.ckpt-200.data-00000-of-00001
+estimator CNN/cnnmodel_dir/keras/keras_model.ckpt.meta
+estimator CNN/cnnmodel_dir/keras/keras_model.ckpt.index
+estimator CNN/cnnmodel_dir/keras/keras_model.ckpt.data-00000-of-00001
+estimator CNN/cnnmodel_dir/keras/checkpoint
+estimator CNN/cnnmodel_dir/graph.pbtxt
+estimator CNN/cnnmodel_dir/export/exporter/1580579736/variables/variables.index
+estimator CNN/cnnmodel_dir/export/exporter/1580579736/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1580579736/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1580579685/variables/variables.index
+estimator CNN/cnnmodel_dir/export/exporter/1580579685/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1580579685/saved_model.pb
+estimator CNN/cnnmodel_dir/events.out.tfevents.1580579671.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/eval/events.out.tfevents.1580579685.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/checkpoint
