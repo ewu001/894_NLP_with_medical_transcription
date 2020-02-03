@@ -34,8 +34,8 @@ def eval_train_generator(path, target, split_ratio, upper_bound=None):
     train_dataset =  pd.concat([true_train, false_train])
     train_dataset = shuffle(train_dataset)
 
-    print(eval_dataset.shape)
-    print(train_dataset.shape)
+    print("Created evaluation dataset of shape: ", eval_dataset.shape)
+    print("Created training dataset of shape: ", train_dataset.shape)
 
     eval_dataset.to_csv("warehouse/store/evaluation_dataset.csv", encoding='utf-8')
     train_dataset.to_csv("warehouse/store/training_dataset.csv", encoding='utf-8')

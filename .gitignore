@@ -138,3 +138,12 @@ estimator CNN/cnnmodel_dir/model.ckpt-656.index
 estimator CNN/cnnmodel_dir/model.ckpt-656.meta
 estimator CNN/training log/train_estimator_log_0202_2117.txt
 estimator CNN/training log/train_estimator_log_0202_2128.txt
+estimator CNN/cnnmodel_dir/eval/events.out.tfevents.1580697377.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/events.out.tfevents.1580697360.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/export/exporter/1580697377/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1580697377/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1580697377/variables/variables.index
+estimator CNN/cnnmodel_dir/export/exporter/1580697463/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1580697463/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1580697463/variables/variables.index
+estimator CNN/training log/train_estimator_log_0202_2135.txt
