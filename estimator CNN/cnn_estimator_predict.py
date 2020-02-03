@@ -4,15 +4,28 @@ import pandas as pd
 import keras
 import utility
 import pathlib
+import argparse
 
 
 MAX_SEQUENCE_LENGTH = 500
-export_model_path = 'cnnmodel_dir/export/exporter/1580579736'
+export_model_path = 'cnnmodel_dir/export/exporter/'
 
 def accuracy_percentage(x, y):
     return (100.0 * len(set(x) & set(y))) / len(set(x) | set(y))
 
 if __name__ == '__main__':
+    # parse command line argument for hyper parameter input
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '--model_id',
+        help='ID of the export trained model',
+        required=True
+    )
+
+    args, _ = parser.parse_known_args()
+    hparams = args.__dict__
+    model_id = hparams.pop('model_id')
+
     # Tokenize and pad sentences using same mapping used in the trained estimator model
     #abspath = pathlib.Path('tokenizer.pickle').absolute()
     with open('tokenizer.pickle', 'rb') as handle:
@@ -29,11 +42,11 @@ if __name__ == '__main__':
     # JSON format the requests
     request_data = {'instances':requests_tokenized.tolist()}
 
-    predict_fn = tf.contrib.predictor.from_saved_model(export_model_path)
+    predict_fn = tf.contrib.predictor.from_saved_model(export_model_path+model_id)
     predictions = predict_fn(
         {"input": requests_tokenized.tolist()})
     prediction_label = predictions['dense_1'].argmax(axis=-1)
-    print(accuracy_percentage(prediction_label, eval_label))
+    print("Accuracy on evaluation: ",accuracy_percentage(prediction_label, eval_label))
 
 
 

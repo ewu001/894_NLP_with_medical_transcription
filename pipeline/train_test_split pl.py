@@ -44,5 +44,5 @@ def eval_train_generator(path, target, split_ratio, upper_bound=None):
 
 if __name__ == '__main__':
     path = os.path.join(os.path.dirname(__file__), "../warehouse/keyword_target_data.csv")
-    split_ratio = 0.02
+    split_ratio = 0.05
     eval_train_generator(path, "Target", split_ratio)

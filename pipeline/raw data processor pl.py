@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 import os
+import glob
+
+CLASSES = [1, 2, 3]
 
 def target_encoding(row):
     '''
@@ -111,12 +114,49 @@ def target_encoding(row):
         row.Target = 1 
     return row
 
+def concatenate_labeled_data(path, classes):
+
+    all_files = glob.glob(path + "/*.csv")
+    li = []
+
+    for filename in all_files:
+        df = pd.read_csv(filename)
+        df = df[df['Target'].isin(classes)]
+        li.append(df)
+
+    frame = pd.concat(li, axis=0, ignore_index=True, sort=True)
+    return frame
+
+def merge_data(raw, labeled, target_encoding, classes):
+    # Argument: 
+    # raw: raw dataframe scrapped from web
+    # labeled: data manually labeled
+    # target_encoding: functional parameter to pass the transformation process
+    # classes: list of unique class to encode
+    # This function will first exclude labeled data from raw data, apply transformation, and then merge back to labeled data
+
+    raw['Target'] = np.zeros((raw.shape[0],1))
+    df_nodup = raw[~raw['transcription'].isin(labeled['transcription'])]
+
+    df_nodup = df_nodup.apply(target_encoding, axis=1)
+    df_labeled_by_logic = df_nodup[df_nodup['Target'].isin(classes)]
+    merge_df = pd.concat([df_labeled_by_logic, labeled], sort=True)
+    return merge_df
+
+
 if __name__ == '__main__':
 
-    rawdf = pd.read_csv(os.path.join(os.path.dirname(__file__), "../lake/medical_transcription_data_raw.csv"))
-    print('extract raw data from lake')
-    #rawdf['Target'].fillna(value=0, inplace=True)
-    rawdf['Target'] = np.zeros((rawdf.shape[0],1))
-    newdf = rawdf.apply(target_encoding, axis=1)
-    newdf.to_csv(os.path.join(os.path.dirname(__file__), '../warehouse/medical_transcription_data_overall.csv'))
-    print('loaded processed data to warehouse')
+    raw_data_path = os.path.join(os.path.dirname(__file__), "../lake/medical_transcription_data_raw.csv")
+    rawdf = pd.read_csv(raw_data_path)
+
+    hand_labeled_path = os.path.join(os.path.dirname(__file__), "../lake/hand_labeled")
+    labeled_df = concatenate_labeled_data(hand_labeled_path, CLASSES)
+
+    print('extracted raw data and hand labeled data from lake')
+
+    merge_df = merge_data(rawdf, labeled_df, target_encoding, CLASSES)
+
+    export_file_path = os.path.join(os.path.dirname(__file__), '../warehouse/medical_transcription_data_overall.csv')
+    merge_df.to_csv(export_file_path)
+    print('transformed data shape: ', merge_df.shape)
+    print('loaded processed data to warehouse successfully')
