@@ -39,12 +39,12 @@ if __name__ == '__main__':
     requests_tokenized = tokenizer.texts_to_sequences(eval_text)
     requests_tokenized = tf.keras.preprocessing.sequence.pad_sequences(requests_tokenized,maxlen=MAX_SEQUENCE_LENGTH)
 
+    #print(requests_tokenized.tolist())
     # JSON format the requests
-    request_data = {'instances':requests_tokenized.tolist()}
+    request_data = requests_tokenized.tolist()
 
     predict_fn = tf.contrib.predictor.from_saved_model(export_model_path+model_id)
-    predictions = predict_fn(
-        {"input": requests_tokenized.tolist()})
+    predictions = predict_fn({"input": request_data})
     prediction_label = predictions['dense_1'].argmax(axis=-1)
     print("Accuracy on evaluation: ",accuracy_percentage(prediction_label, eval_label))
 
