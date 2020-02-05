@@ -164,3 +164,35 @@ estimator CNN/training log/train_estimator_log_0204_1031.txt
 estimator CNN/training log/train_estimator_log_0204_1035.txt
 estimator CNN/training log/train_estimator_log_0204_1039.txt
 estimator CNN/training log/train_estimator_log_0204_1045.txt
+estimator CNN/cnnmodel_dir/eval/events.out.tfevents.1580837490.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/events.out.tfevents.1580837472.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/export/exporter/1580837490/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1580837490/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1580837490/variables/variables.index
+estimator CNN/cnnmodel_dir/export/exporter/1580837533/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1580837533/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1580837533/variables/variables.index
+estimator CNN/cnnmodel_dir/model.ckpt-100.data-00000-of-00001
+estimator CNN/cnnmodel_dir/model.ckpt-100.index
+estimator CNN/cnnmodel_dir/model.ckpt-100.meta
+estimator CNN/cnnmodel_dir/model.ckpt-438.data-00000-of-00001
+estimator CNN/cnnmodel_dir/model.ckpt-438.index
+estimator CNN/cnnmodel_dir/model.ckpt-438.meta
+estimator CNN/cnnmodel_dir/eval/events.out.tfevents.1580930855.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/events.out.tfevents.1580930837.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/export/exporter/1580930855/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1580930855/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1580930855/variables/variables.index
+estimator CNN/cnnmodel_dir/export/exporter/1580930917/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1580930917/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1580930917/variables/variables.index
+estimator CNN/training log/train_estimator_log_0204_1148.txt
+estimator CNN/training log/train_estimator_log_0204_1156.txt
+estimator CNN/training log/train_estimator_log_0204_1202.txt
+estimator CNN/training log/train_estimator_log_0204_1208.txt
+estimator CNN/training log/train_estimator_log_0204_1218.txt
+estimator CNN/training log/train_estimator_log_0204_1221.txt
+estimator CNN/training log/train_estimator_log_0204_1227.txt
+estimator CNN/training log/train_estimator_log_0204_1230.txt
+estimator CNN/training log/train_estimator_log_0205_1423.txt
+estimator CNN/training log/train_estimator_log_0205_1426.txt

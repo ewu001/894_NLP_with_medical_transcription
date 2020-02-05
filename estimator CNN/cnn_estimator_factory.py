@@ -88,7 +88,7 @@ def train_and_evaluate(output_dir, hparams):
 
 
     # Create vocabulary from training corpus 
-    tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=VOCAB_SIZE)
+    tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=VOCAB_SIZE+1, oov_token='<unk>')
     tokenizer.fit_on_texts(train_text)
 
     # Save token dictionary to use during prediction time

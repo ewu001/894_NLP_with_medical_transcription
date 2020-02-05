@@ -14,12 +14,9 @@ def load_data(path, classes):
     train_Y = train_df['Target'].iloc[1:].map(classes)
     eval_Y = eval_df['Target'].iloc[1:].map(classes)
 
-    print(train_Y.unique())
+    print("Unique classes of target label: ", train_Y.unique())
     one_hot_train_Y = tf.keras.utils.to_categorical(train_Y)
     one_hot_eval_Y = tf.keras.utils.to_categorical(eval_Y)
-
-    print(one_hot_train_Y.shape)
-    print(one_hot_eval_Y.shape)
 
     return((list(train_df['transcription'].iloc[1:].astype(str)), one_hot_train_Y),
             (list(eval_df['transcription'].iloc[1:].astype(str)), one_hot_eval_Y))
@@ -51,7 +48,7 @@ def get_embedding(embedding_path):
 def get_sentence_level_embedding(word_index, matrix, embedding_dim, vocab_size):
     # This function will get word to word vector mapping from embedding look up 
 
-    num_words = min(len(word_index)+1, vocab_size)
+    num_words = min(len(word_index), vocab_size) + 1
     embedding_matrix = np.zeros((num_words, embedding_dim))
 
     # prepare embedding matrix

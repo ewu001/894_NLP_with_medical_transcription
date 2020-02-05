@@ -34,16 +34,16 @@ def text_lemmalization(text, lemmatizer):
 def extract_transform_load_csv(read_path, export_path):
     # Main ETL pipeline
     print('Start extracting ')
-    tokenizer = RegexpTokenizer(r'\w+')
+    #tokenizer = RegexpTokenizer(r'\w+')
     df = pd.read_csv(read_path)
     df = df.apply(target_encoding, axis=1)
 
     returndf = df[["transcription", "Target"]]
     processeddf = returndf[returndf['Target'] !=0]
     print('Start pre-processing ')
-    processeddf['transcription'] = processeddf['transcription'].apply(lambda x: remove_html(str(x).lower()))
-    processeddf['transcription'] = processeddf['transcription'].apply(lambda x: remove_punctuation(x))
-    processeddf['transcription'] = processeddf['transcription'].apply(lambda x: x.split(' '))
+    #processeddf['transcription'] = processeddf['transcription'].apply(lambda x: remove_html(str(x).lower()))
+    #processeddf['transcription'] = processeddf['transcription'].apply(lambda x: remove_punctuation(str(x).lower()))
+    processeddf['transcription'] = processeddf['transcription'].apply(lambda x: str(x).split(' '))
     processeddf['transcription'] = processeddf['transcription'].apply(lambda x: text_lemmalization(x, WordNetLemmatizer()))
     processeddf['transcription'] = processeddf['transcription'].apply(lambda x: "".join([item + " " for item in x]))
 
