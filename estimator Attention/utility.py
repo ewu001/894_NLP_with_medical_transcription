@@ -65,7 +65,3 @@ def get_sentence_level_embedding(word_index, matrix, embedding_dim, vocab_size):
 
     return embedding_matrix
 
-def auc(y_true, y_pred):
-    # Customized definition of AUC performance metric
-    auc = tf.metrics.auc(y_true, y_pred)[1]
-    return auc
