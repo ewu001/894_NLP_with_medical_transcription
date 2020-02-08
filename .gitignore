@@ -430,3 +430,18 @@ estimator_CNN/training log/train_estimator_log_0205_1423.txt
 estimator_CNN/training log/train_estimator_log_0205_1426.txt
 estimator_CNN/training log/train_estimator_log_0205_1702.txt
 estimator_CNN/training log/train_estimator_log_0207_2023.txt
+estimator_CNN/cnnmodel_dir/eval/events.out.tfevents.1581175009.LAPTOP-42K07IEA
+estimator_CNN/cnnmodel_dir/events.out.tfevents.1581174996.LAPTOP-42K07IEA
+estimator_CNN/cnnmodel_dir/export/exporter/1581175010/saved_model.pb
+estimator_CNN/cnnmodel_dir/export/exporter/1581175010/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581175010/variables/variables.index
+estimator_CNN/cnnmodel_dir/export/exporter/1581175062/saved_model.pb
+estimator_CNN/cnnmodel_dir/export/exporter/1581175062/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581175062/variables/variables.index
+estimator_CNN/cnnmodel_dir/export/exporter/1581175112/saved_model.pb
+estimator_CNN/cnnmodel_dir/export/exporter/1581175112/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581175112/variables/variables.index
+estimator_CNN/cnnmodel_dir/export/exporter/1581175120/saved_model.pb
+estimator_CNN/cnnmodel_dir/export/exporter/1581175120/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581175120/variables/variables.index
+estimator_CNN/training log/train_estimator_log_0208_1016.txt
