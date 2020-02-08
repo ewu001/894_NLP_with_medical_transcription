@@ -18,7 +18,7 @@ import utility
 Hyperparameter configuration section
 '''
 CLASSES = {'1.0': 1, '2.0': 0}
-EVAL_INTERVAL = 100
+EVAL_INTERVAL = 50
 # These values will come from command line argument
 MAX_SEQUENCE_LENGTH = None
 VOCAB_SIZE = None
@@ -117,7 +117,7 @@ def train_and_evaluate(output_dir, hparams):
             hparams['batch_size'], mode=tf.estimator.ModeKeys.EVAL), 
             steps=None, 
             exporters=exporter,
-            start_delay_secs=10,
+            start_delay_secs=50,
             throttle_secs = EVAL_INTERVAL)  # evaluate every N seconds
 
     tf.estimator.train_and_evaluate(estimator, train_spec, eval_spec)

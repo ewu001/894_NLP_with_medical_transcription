@@ -58,7 +58,7 @@ if __name__ == '__main__':
     predictions = predict_fn({"input": request_data})
     prediction_label = predictions['dense_1'].argmax(axis=-1)
     print(predictions)
-    print("Expected output: 1 1 0 0. 1 for urgent and 0 for non urgent")
+    print("Expected output: 1 1 0 0 where 1 for urgent and 0 for non urgent")
     print("Predicted labels for request: ", prediction_label)
 
 

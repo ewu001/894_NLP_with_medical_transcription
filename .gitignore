@@ -253,3 +253,37 @@ estimator CNN/cnnmodel_dir/export/exporter/1581125123/saved_model.pb
 estimator CNN/cnnmodel_dir/export/exporter/1581125123/variables/variables.data-00000-of-00001
 estimator CNN/cnnmodel_dir/export/exporter/1581125123/variables/variables.index
 estimator CNN/training log/train_estimator_log_0207_2023.txt
+estimator Attention/attentionmd_dir/eval/events.out.tfevents.1581125764.LAPTOP-42K07IEA
+estimator Attention/attentionmd_dir/events.out.tfevents.1581125676.LAPTOP-42K07IEA
+estimator Attention/attentionmd_dir/export/exporter/1581126163/saved_model.pb
+estimator Attention/attentionmd_dir/export/exporter/1581126163/variables/variables.data-00000-of-00001
+estimator Attention/attentionmd_dir/export/exporter/1581126163/variables/variables.index
+estimator Attention/attentionmd_dir/export/exporter/1581126371/saved_model.pb
+estimator Attention/attentionmd_dir/export/exporter/1581126371/variables/variables.data-00000-of-00001
+estimator Attention/attentionmd_dir/export/exporter/1581126371/variables/variables.index
+estimator Attention/attentionmd_dir/export/exporter/1581126470/saved_model.pb
+estimator Attention/attentionmd_dir/export/exporter/1581126470/variables/variables.data-00000-of-00001
+estimator Attention/attentionmd_dir/export/exporter/1581126470/variables/variables.index
+estimator Attention/attentionmd_dir/export/exporter/1581126639/saved_model.pb
+estimator Attention/attentionmd_dir/export/exporter/1581126639/variables/variables.data-00000-of-00001
+estimator Attention/attentionmd_dir/export/exporter/1581126639/variables/variables.index
+estimator Attention/attentionmd_dir/export/exporter/1581126778/saved_model.pb
+estimator Attention/attentionmd_dir/export/exporter/1581126778/variables/variables.data-00000-of-00001
+estimator Attention/attentionmd_dir/export/exporter/1581126778/variables/variables.index
+estimator Attention/attentionmd_dir/model.ckpt-1000.data-00000-of-00001
+estimator Attention/attentionmd_dir/model.ckpt-1000.index
+estimator Attention/attentionmd_dir/model.ckpt-1000.meta
+estimator Attention/attentionmd_dir/model.ckpt-1100.data-00000-of-00001
+estimator Attention/attentionmd_dir/model.ckpt-1100.index
+estimator Attention/attentionmd_dir/model.ckpt-1100.meta
+estimator Attention/attentionmd_dir/model.ckpt-1166.data-00000-of-00001
+estimator Attention/attentionmd_dir/model.ckpt-1166.index
+estimator Attention/attentionmd_dir/model.ckpt-1166.meta
+estimator Attention/attentionmd_dir/model.ckpt-800.data-00000-of-00001
+estimator Attention/attentionmd_dir/model.ckpt-800.index
+estimator Attention/attentionmd_dir/model.ckpt-800.meta
+estimator Attention/attentionmd_dir/model.ckpt-900.data-00000-of-00001
+estimator Attention/attentionmd_dir/model.ckpt-900.index
+estimator Attention/attentionmd_dir/model.ckpt-900.meta
+estimator Attention/training log/train_estimator_log_0207_2033.txt
+estimator Attention/training log/train_estimator_log_0207_2034.txt

@@ -5,7 +5,7 @@ def attention_model(input_dim, input_length, learning_rate, embedding_dim, lstm_
     # input_length is MAX_SEQUENCE_LENGTH
     # input dim is num_features
 
-    md_input = tf.keras.layers.Input(shape=[input_length], dtype='int32')
+    md_input = tf.keras.layers.Input(shape=[input_length], dtype='float32')
 
     # Create embedding layer
     if embedding is not None:

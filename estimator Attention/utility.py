@@ -14,12 +14,10 @@ def load_data(path, classes):
     train_Y = train_df['Target'].iloc[1:].map(classes)
     eval_Y = eval_df['Target'].iloc[1:].map(classes)
 
-    print(train_Y.unique())
+    print("Unique targets to train: ",train_Y.unique())
     one_hot_train_Y = tf.keras.utils.to_categorical(train_Y)
     one_hot_eval_Y = tf.keras.utils.to_categorical(eval_Y)
 
-    print(one_hot_train_Y.shape)
-    print(one_hot_eval_Y.shape)
 
     return((list(train_df['transcription'].iloc[1:].astype(str)), one_hot_train_Y),
             (list(eval_df['transcription'].iloc[1:].astype(str)), one_hot_eval_Y))
