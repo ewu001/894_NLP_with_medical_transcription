@@ -1,0 +1,29 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-64
+_anaconda_depends=2019.03=py37_0
+_ipyw_jlab_nb_ext_conf=0.1.0=py37_0
+_tflow_select=2.3.0=mkl
+keras=2.3.1=pypi_0
+keras-applications=1.0.8=py_0
+keras-preprocessing=1.1.0=py_1
+nltk=3.4.5=py37_0
+numpy=1.17.3=py37h4ceb530_0
+numpy-base=1.17.3=py37hc3f5095_0
+numpydoc=0.9.1=py_0
+pandas=0.25.3=py37ha925a31_0
+python=3.7.3=h8c8aaf0_1
+requests=2.22.0=py37_0
+scikit-image=0.15.0=py37ha925a31_0
+scikit-learn=0.21.3=py37h6288b17_0
+scipy=1.3.1=py37h29ff71c_0
+sklearn=0.0=pypi_0
+tensorboard=2.0.1=pypi_0
+tensorflow=2.0.0=pypi_0
+tensorflow-base=1.15.0=mkl_py37h190a33d_0
+tensorflow-estimator=2.0.1=pypi_0
+tensorflow-hub=0.7.0=pyhe1b5a44_0
+tf-estimator-nightly=1.14.0.dev2019030115=pypi_0
+torch=1.3.1+cu92=pypi_0
+torchvision=0.4.2+cu92=pypi_0
+yaml=0.1.7=hc54c509_2
