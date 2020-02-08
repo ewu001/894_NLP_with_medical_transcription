@@ -54,7 +54,7 @@ def serving_input_fn():
     features = feature_placeholder
     return tf.estimator.export.TensorServingInputReceiver(features, feature_placeholder)
 
-def cnn_estimator(model_dir, config, learning_rate, embedding_dim, word_index=None, embedding_path=None):
+def cnn_estimator(model_dir, config, learning_rate, embedding_dim, filters, dropout_rate, kernel_size, pool_size, word_index=None, embedding_path=None):
 
     input_dim = min(len(word_index)+1, VOCAB_SIZE)
 
@@ -65,7 +65,8 @@ def cnn_estimator(model_dir, config, learning_rate, embedding_dim, word_index=No
     else:
         embedding_matrix = None
     
-    cnnmodel = cnn_estimator_model.cnn_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim,
+    cnnmodel = cnn_estimator_model.cnn_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, 
+                                filters, dropout_rate, kernel_size, pool_size,
                                 embedding=embedding_matrix, word_index=word_index)
 
 
@@ -104,6 +105,10 @@ def train_and_evaluate(output_dir, hparams):
     estimator = cnn_estimator(output_dir, run_config,
                                 hparams['learning_rate'],
                                 EMBEDDING_DIM,
+                                hparams['filters'],
+                                hparams['dropout_rate'],
+                                hparams['kernel_size'],
+                                hparams['pool_size'],
                                 word_index=tokenizer.word_index,
                                 embedding_path=hparams['embedding_path'])
 

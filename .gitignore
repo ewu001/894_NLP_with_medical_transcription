@@ -244,3 +244,12 @@ estimator CNN/cnnmodel_dir/export/exporter/1580940226/variables/variables.index
 estimator CNN/cnnmodel_dir/export/exporter/1580940286/saved_model.pb
 estimator CNN/cnnmodel_dir/export/exporter/1580940286/variables/variables.data-00000-of-00001
 estimator CNN/cnnmodel_dir/export/exporter/1580940286/variables/variables.index
+estimator CNN/cnnmodel_dir/eval/events.out.tfevents.1581125049.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/events.out.tfevents.1581125028.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/export/exporter/1581125049/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1581125049/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1581125049/variables/variables.index
+estimator CNN/cnnmodel_dir/export/exporter/1581125123/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1581125123/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1581125123/variables/variables.index
+estimator CNN/training log/train_estimator_log_0207_2023.txt

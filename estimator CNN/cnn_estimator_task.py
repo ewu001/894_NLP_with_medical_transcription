@@ -50,6 +50,31 @@ if __name__ == '__main__':
         default=300,
         type=int
     )
+    parser.add_argument(
+        '--filters',
+        help='number of filters to be used in the convolutional network',
+        default=32,
+        type=int
+    )
+    parser.add_argument(
+        '--kernel_size',
+        help='size of the kernels to be used in the convolutional network, by default it uses 3x3 kernel',
+        default=3,
+        type=int
+    )
+    parser.add_argument(
+        '--pool_size',
+        help='size of the pooling layer to be used in the convolutional network, by default it uses 2x2 pool',
+        default=2,
+        type=int
+    )
+    parser.add_argument(
+        '--dropout_rate',
+        help='dropout rate used inside the convolutional network to regularize model from being overfit',
+        default=0.2,
+        type=float
+    )
+#, pool_size
 
 
     args, _ = parser.parse_known_args()
