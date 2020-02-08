@@ -305,3 +305,128 @@ estimator CNN/cnnmodel_dir/model.ckpt-550.data-00000-of-00001
 estimator CNN/cnnmodel_dir/model.ckpt-550.index
 estimator CNN/cnnmodel_dir/model.ckpt-550.meta
 estimator CNN/training log/train_estimator_log_0207_2104.txt
+estimator_Attention/attentionmd_dir/eval/events.out.tfevents.1581125764.LAPTOP-42K07IEA
+estimator_Attention/attentionmd_dir/events.out.tfevents.1581125676.LAPTOP-42K07IEA
+estimator_Attention/attentionmd_dir/export/exporter/1581126163/saved_model.pb
+estimator_Attention/attentionmd_dir/export/exporter/1581126163/variables/variables.data-00000-of-00001
+estimator_Attention/attentionmd_dir/export/exporter/1581126163/variables/variables.index
+estimator_Attention/attentionmd_dir/export/exporter/1581126371/saved_model.pb
+estimator_Attention/attentionmd_dir/export/exporter/1581126371/variables/variables.data-00000-of-00001
+estimator_Attention/attentionmd_dir/export/exporter/1581126371/variables/variables.index
+estimator_Attention/attentionmd_dir/export/exporter/1581126470/saved_model.pb
+estimator_Attention/attentionmd_dir/export/exporter/1581126470/variables/variables.data-00000-of-00001
+estimator_Attention/attentionmd_dir/export/exporter/1581126470/variables/variables.index
+estimator_Attention/attentionmd_dir/export/exporter/1581126639/saved_model.pb
+estimator_Attention/attentionmd_dir/export/exporter/1581126639/variables/variables.data-00000-of-00001
+estimator_Attention/attentionmd_dir/export/exporter/1581126639/variables/variables.index
+estimator_Attention/attentionmd_dir/export/exporter/1581126778/saved_model.pb
+estimator_Attention/attentionmd_dir/export/exporter/1581126778/variables/variables.data-00000-of-00001
+estimator_Attention/attentionmd_dir/export/exporter/1581126778/variables/variables.index
+estimator_Attention/attentionmd_dir/graph.pbtxt
+estimator_Attention/attentionmd_dir/keras/checkpoint
+estimator_Attention/attentionmd_dir/keras/keras_model.ckpt.data-00000-of-00001
+estimator_Attention/attentionmd_dir/keras/keras_model.ckpt.index
+estimator_Attention/attentionmd_dir/keras/keras_model.ckpt.meta
+estimator_Attention/attentionmd_dir/model.ckpt-1000.data-00000-of-00001
+estimator_Attention/attentionmd_dir/model.ckpt-1000.index
+estimator_Attention/attentionmd_dir/model.ckpt-1000.meta
+estimator_Attention/attentionmd_dir/model.ckpt-1100.data-00000-of-00001
+estimator_Attention/attentionmd_dir/model.ckpt-1100.index
+estimator_Attention/attentionmd_dir/model.ckpt-1100.meta
+estimator_Attention/attentionmd_dir/model.ckpt-1166.data-00000-of-00001
+estimator_Attention/attentionmd_dir/model.ckpt-1166.index
+estimator_Attention/attentionmd_dir/model.ckpt-1166.meta
+estimator_Attention/attentionmd_dir/model.ckpt-800.data-00000-of-00001
+estimator_Attention/attentionmd_dir/model.ckpt-800.index
+estimator_Attention/attentionmd_dir/model.ckpt-800.meta
+estimator_Attention/attentionmd_dir/model.ckpt-900.data-00000-of-00001
+estimator_Attention/attentionmd_dir/model.ckpt-900.index
+estimator_Attention/attentionmd_dir/model.ckpt-900.meta
+estimator_Attention/training log/train_estimator_log_0205_1611.txt
+estimator_Attention/training log/train_estimator_log_0205_1612.txt
+estimator_Attention/training log/train_estimator_log_0205_1614.txt
+estimator_Attention/training log/train_estimator_log_0205_1618.txt
+estimator_Attention/training log/train_estimator_log_0205_1624.txt
+estimator_Attention/training log/train_estimator_log_0205_1626.txt
+estimator_Attention/training log/train_estimator_log_0205_1627.txt
+estimator_Attention/training log/train_estimator_log_0205_1630.txt
+estimator_Attention/training log/train_estimator_log_0205_1631.txt
+estimator_Attention/training log/train_estimator_log_0205_1635.txt
+estimator_Attention/training log/train_estimator_log_0205_1638.txt
+estimator_Attention/training log/train_estimator_log_0205_1645.txt
+estimator_Attention/training log/train_estimator_log_0207_2033.txt
+estimator_CNN/cnnmodel_dir/checkpoint
+estimator_CNN/cnnmodel_dir/eval/events.out.tfevents.1581127510.LAPTOP-42K07IEA
+estimator_CNN/cnnmodel_dir/events.out.tfevents.1581127497.LAPTOP-42K07IEA
+estimator_CNN/cnnmodel_dir/export/exporter/1581127510/saved_model.pb
+estimator_CNN/cnnmodel_dir/export/exporter/1581127510/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581127510/variables/variables.index
+estimator_CNN/cnnmodel_dir/export/exporter/1581127561/saved_model.pb
+estimator_CNN/cnnmodel_dir/export/exporter/1581127561/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581127561/variables/variables.index
+estimator_CNN/cnnmodel_dir/export/exporter/1581127602/saved_model.pb
+estimator_CNN/cnnmodel_dir/export/exporter/1581127602/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581127602/variables/variables.index
+estimator_CNN/cnnmodel_dir/graph.pbtxt
+estimator_CNN/cnnmodel_dir/keras/checkpoint
+estimator_CNN/cnnmodel_dir/keras/keras_model.ckpt.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/keras/keras_model.ckpt.index
+estimator_CNN/cnnmodel_dir/keras/keras_model.ckpt.meta
+estimator_CNN/cnnmodel_dir/model.ckpt-400.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/model.ckpt-400.index
+estimator_CNN/cnnmodel_dir/model.ckpt-400.meta
+estimator_CNN/cnnmodel_dir/model.ckpt-450.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/model.ckpt-450.index
+estimator_CNN/cnnmodel_dir/model.ckpt-450.meta
+estimator_CNN/cnnmodel_dir/model.ckpt-500.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/model.ckpt-500.index
+estimator_CNN/cnnmodel_dir/model.ckpt-500.meta
+estimator_CNN/cnnmodel_dir/model.ckpt-550.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/model.ckpt-550.index
+estimator_CNN/cnnmodel_dir/model.ckpt-550.meta
+estimator_CNN/cnnmodel_dir/model.ckpt-583.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/model.ckpt-583.index
+estimator_CNN/cnnmodel_dir/model.ckpt-583.meta
+estimator_CNN/training log/train_estimator_log_0131_1145.txt
+estimator_CNN/training log/train_estimator_log_0131_1959.txt
+estimator_CNN/training log/train_estimator_log_0131_2027.txt
+estimator_CNN/training log/train_estimator_log_0131_2028.txt
+estimator_CNN/training log/train_estimator_log_0131_2042.txt
+estimator_CNN/training log/train_estimator_log_0131_2056.txt
+estimator_CNN/training log/train_estimator_log_0131_2100.txt
+estimator_CNN/training log/train_estimator_log_0131_2107.txt
+estimator_CNN/training log/train_estimator_log_0131_2201.txt
+estimator_CNN/training log/train_estimator_log_0131_2203.txt
+estimator_CNN/training log/train_estimator_log_0131_2204.txt
+estimator_CNN/training log/train_estimator_log_0131_2206.txt
+estimator_CNN/training log/train_estimator_log_0131_2211.txt
+estimator_CNN/training log/train_estimator_log_0131_2213.txt
+estimator_CNN/training log/train_estimator_log_0131_2218.txt
+estimator_CNN/training log/train_estimator_log_0131_2226.txt
+estimator_CNN/training log/train_estimator_log_0131_2233.txt
+estimator_CNN/training log/train_estimator_log_0131_2240.txt
+estimator_CNN/training log/train_estimator_log_0131_2248.txt
+estimator_CNN/training log/train_estimator_log_0131_2252.txt
+estimator_CNN/training log/train_estimator_log_0201_1251.txt
+estimator_CNN/training log/train_estimator_log_0201_1254.txt
+estimator_CNN/training log/train_estimator_log_0202_2117.txt
+estimator_CNN/training log/train_estimator_log_0202_2128.txt
+estimator_CNN/training log/train_estimator_log_0202_2135.txt
+estimator_CNN/training log/train_estimator_log_0204_1008.txt
+estimator_CNN/training log/train_estimator_log_0204_1018.txt
+estimator_CNN/training log/train_estimator_log_0204_1031.txt
+estimator_CNN/training log/train_estimator_log_0204_1035.txt
+estimator_CNN/training log/train_estimator_log_0204_1039.txt
+estimator_CNN/training log/train_estimator_log_0204_1045.txt
+estimator_CNN/training log/train_estimator_log_0204_1148.txt
+estimator_CNN/training log/train_estimator_log_0204_1156.txt
+estimator_CNN/training log/train_estimator_log_0204_1202.txt
+estimator_CNN/training log/train_estimator_log_0204_1208.txt
+estimator_CNN/training log/train_estimator_log_0204_1218.txt
+estimator_CNN/training log/train_estimator_log_0204_1221.txt
+estimator_CNN/training log/train_estimator_log_0204_1227.txt
+estimator_CNN/training log/train_estimator_log_0204_1230.txt
+estimator_CNN/training log/train_estimator_log_0205_1423.txt
+estimator_CNN/training log/train_estimator_log_0205_1426.txt
+estimator_CNN/training log/train_estimator_log_0205_1702.txt
+estimator_CNN/training log/train_estimator_log_0207_2023.txt

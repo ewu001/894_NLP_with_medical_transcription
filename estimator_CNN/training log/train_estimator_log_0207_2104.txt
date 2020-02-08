@@ -17,20 +17,20 @@ Call initializer instance with the dtype argument instead of passing it to the c
 WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\ops\math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.where in 2.0, which has the same broadcast rule as np.where
-INFO:tensorflow:Using config: {'_model_dir': 'cnnmodel_dir', '_tf_random_seed': None, '_save_summary_steps': 50, '_save_checkpoints_steps': 100, '_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+INFO:tensorflow:Using config: {'_model_dir': 'cnnmodel_dir', '_tf_random_seed': None, '_save_summary_steps': 50, '_save_checkpoints_steps': 50, '_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
 graph_options {
   rewrite_options {
     meta_optimizer_iterations: ONE
   }
 }
-, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 20, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x00000216A3ED5320>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 20, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x000001A7BC558EB8>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
 WARNING:tensorflow:From C:\Users\junsh\Documents\GitHub\MMAI894_deeplearning\estimator CNN\cnn_estimator_factory.py:44: The name tf.estimator.inputs is deprecated. Please use tf.compat.v1.estimator.inputs instead.
 
 WARNING:tensorflow:From C:\Users\junsh\Documents\GitHub\MMAI894_deeplearning\estimator CNN\cnn_estimator_factory.py:44: The name tf.estimator.inputs.numpy_input_fn is deprecated. Please use tf.compat.v1.estimator.inputs.numpy_input_fn instead.
 
 INFO:tensorflow:Not using Distribute Coordinator.
 INFO:tensorflow:Running training and evaluation locally (non-distributed).
-INFO:tensorflow:Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps 100 or save_checkpoints_secs None.
+INFO:tensorflow:Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps 50 or save_checkpoints_secs None.
 WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\training\training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
@@ -54,26 +54,22 @@ WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\sit
 Instructions for updating:
 To construct input pipelines, use the `tf.data` module.
 INFO:tensorflow:Saving checkpoints for 0 into cnnmodel_dir\model.ckpt.
-INFO:tensorflow:loss = 0.70960355, step = 1
-INFO:tensorflow:global_step/sec: 6.28654
-INFO:tensorflow:loss = 0.47869968, step = 21 (3.181 sec)
-INFO:tensorflow:global_step/sec: 7.91752
-INFO:tensorflow:loss = 0.5166558, step = 41 (2.526 sec)
-INFO:tensorflow:global_step/sec: 7.60002
-INFO:tensorflow:loss = 0.4412259, step = 61 (2.632 sec)
-INFO:tensorflow:global_step/sec: 8.7345
-INFO:tensorflow:loss = 0.5570441, step = 81 (2.290 sec)
-INFO:tensorflow:Saving checkpoints for 100 into cnnmodel_dir\model.ckpt.
+INFO:tensorflow:loss = 0.72688085, step = 1
+INFO:tensorflow:global_step/sec: 5.01095
+INFO:tensorflow:loss = 0.6650297, step = 21 (3.991 sec)
+INFO:tensorflow:global_step/sec: 6.25126
+INFO:tensorflow:loss = 0.44854262, step = 41 (3.199 sec)
+INFO:tensorflow:Saving checkpoints for 50 into cnnmodel_dir\model.ckpt.
 INFO:tensorflow:Calling model_fn.
 INFO:tensorflow:Done calling model_fn.
-INFO:tensorflow:Starting evaluation at 2020-02-05T17:03:44Z
+INFO:tensorflow:Starting evaluation at 2020-02-07T21:05:08Z
 INFO:tensorflow:Graph was finalized.
-INFO:tensorflow:Restoring parameters from cnnmodel_dir\model.ckpt-100
+INFO:tensorflow:Restoring parameters from cnnmodel_dir\model.ckpt-50
 INFO:tensorflow:Running local_init_op.
 INFO:tensorflow:Done running local_init_op.
-INFO:tensorflow:Finished evaluation at 2020-02-05-17:03:46
-INFO:tensorflow:Saving dict for global step 100: acc = 0.6866953, auc = 0.77882147, global_step = 100, loss = 0.5679403
-INFO:tensorflow:Saving 'checkpoint_path' summary for global step 100: cnnmodel_dir\model.ckpt-100
+INFO:tensorflow:Finished evaluation at 2020-02-07-21:05:10
+INFO:tensorflow:Saving dict for global step 50: acc = 0.7746781, auc = 0.84351915, global_step = 50, loss = 0.576918
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 50: cnnmodel_dir\model.ckpt-50
 WARNING:tensorflow:From C:\Users\junsh\Documents\GitHub\MMAI894_deeplearning\estimator CNN\cnn_estimator_factory.py:53: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
 
 INFO:tensorflow:Calling model_fn.
@@ -86,82 +82,118 @@ INFO:tensorflow:Signatures INCLUDED in export for Regress: None
 INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
 INFO:tensorflow:Signatures INCLUDED in export for Train: None
 INFO:tensorflow:Signatures INCLUDED in export for Eval: None
-INFO:tensorflow:Restoring parameters from cnnmodel_dir\model.ckpt-100
+INFO:tensorflow:Restoring parameters from cnnmodel_dir\model.ckpt-50
 INFO:tensorflow:Assets added to graph.
 INFO:tensorflow:No assets to write.
-INFO:tensorflow:SavedModel written to: cnnmodel_dir\export\exporter\temp-b'1580940226'\saved_model.pb
-INFO:tensorflow:global_step/sec: 4.05932
-INFO:tensorflow:loss = 0.6014043, step = 101 (4.928 sec)
-INFO:tensorflow:global_step/sec: 8.42942
-INFO:tensorflow:loss = 0.362439, step = 121 (2.372 sec)
-INFO:tensorflow:global_step/sec: 8.34611
-INFO:tensorflow:loss = 0.40009102, step = 141 (2.397 sec)
-INFO:tensorflow:global_step/sec: 8.26577
-INFO:tensorflow:loss = 0.36348584, step = 161 (2.419 sec)
-INFO:tensorflow:global_step/sec: 8.72909
-INFO:tensorflow:loss = 0.36001068, step = 181 (2.291 sec)
+INFO:tensorflow:SavedModel written to: cnnmodel_dir\export\exporter\temp-b'1581127510'\saved_model.pb
+INFO:tensorflow:global_step/sec: 3.16273
+INFO:tensorflow:loss = 0.36538738, step = 61 (6.323 sec)
+INFO:tensorflow:global_step/sec: 6.17059
+INFO:tensorflow:loss = 0.322395, step = 81 (3.242 sec)
+INFO:tensorflow:Saving checkpoints for 100 into cnnmodel_dir\model.ckpt.
+INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (50 secs).
+INFO:tensorflow:global_step/sec: 5.87591
+INFO:tensorflow:loss = 0.4872011, step = 101 (3.404 sec)
+INFO:tensorflow:global_step/sec: 6.23151
+INFO:tensorflow:loss = 0.4912919, step = 121 (3.209 sec)
+INFO:tensorflow:global_step/sec: 6.48156
+INFO:tensorflow:loss = 0.4259236, step = 141 (3.086 sec)
+INFO:tensorflow:Saving checkpoints for 150 into cnnmodel_dir\model.ckpt.
+INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (50 secs).
+INFO:tensorflow:global_step/sec: 5.71339
+INFO:tensorflow:loss = 0.39931366, step = 161 (3.501 sec)
+INFO:tensorflow:global_step/sec: 6.45285
+INFO:tensorflow:loss = 0.45357573, step = 181 (3.099 sec)
 INFO:tensorflow:Saving checkpoints for 200 into cnnmodel_dir\model.ckpt.
-INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (100 secs).
-INFO:tensorflow:global_step/sec: 7.70623
-INFO:tensorflow:loss = 0.56291306, step = 201 (2.596 sec)
-INFO:tensorflow:global_step/sec: 8.1729
-INFO:tensorflow:loss = 0.34746498, step = 221 (2.446 sec)
-INFO:tensorflow:global_step/sec: 8.64306
-INFO:tensorflow:loss = 0.28021032, step = 241 (2.314 sec)
-INFO:tensorflow:global_step/sec: 8.61868
-INFO:tensorflow:loss = 0.3889056, step = 261 (2.321 sec)
-INFO:tensorflow:global_step/sec: 8.09934
-INFO:tensorflow:loss = 0.13614413, step = 281 (2.469 sec)
-INFO:tensorflow:Saving checkpoints for 300 into cnnmodel_dir\model.ckpt.
-INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (100 secs).
-INFO:tensorflow:global_step/sec: 7.72172
-INFO:tensorflow:loss = 0.11487606, step = 301 (2.591 sec)
-INFO:tensorflow:global_step/sec: 8.37253
-INFO:tensorflow:loss = 0.21674232, step = 321 (2.388 sec)
-INFO:tensorflow:global_step/sec: 8.43522
-INFO:tensorflow:loss = 0.31964937, step = 341 (2.371 sec)
-INFO:tensorflow:global_step/sec: 8.6157
-INFO:tensorflow:loss = 0.24648067, step = 361 (2.321 sec)
-INFO:tensorflow:global_step/sec: 8.63734
-INFO:tensorflow:loss = 0.22249167, step = 381 (2.316 sec)
-INFO:tensorflow:Saving checkpoints for 400 into cnnmodel_dir\model.ckpt.
-INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (100 secs).
-INFO:tensorflow:global_step/sec: 7.80925
-INFO:tensorflow:loss = 0.40886337, step = 401 (2.562 sec)
-INFO:tensorflow:global_step/sec: 8.07924
-INFO:tensorflow:loss = 0.07393734, step = 421 (2.474 sec)
-INFO:tensorflow:global_step/sec: 8.65517
-INFO:tensorflow:loss = 0.13618845, step = 441 (2.311 sec)
-INFO:tensorflow:global_step/sec: 8.6122
-INFO:tensorflow:loss = 0.07875134, step = 461 (2.322 sec)
-INFO:tensorflow:global_step/sec: 8.59289
-INFO:tensorflow:loss = 0.14436665, step = 481 (2.328 sec)
-INFO:tensorflow:Saving checkpoints for 500 into cnnmodel_dir\model.ckpt.
+INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (50 secs).
+INFO:tensorflow:global_step/sec: 6.02283
+INFO:tensorflow:loss = 0.33002013, step = 201 (3.322 sec)
+INFO:tensorflow:global_step/sec: 6.37766
+INFO:tensorflow:loss = 0.23118144, step = 221 (3.135 sec)
+INFO:tensorflow:global_step/sec: 6.51528
+INFO:tensorflow:loss = 0.31372386, step = 241 (3.070 sec)
+INFO:tensorflow:Saving checkpoints for 250 into cnnmodel_dir\model.ckpt.
 WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\training\saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use standard file APIs to delete files with this prefix.
-INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (100 secs).
-INFO:tensorflow:global_step/sec: 7.86047
-INFO:tensorflow:loss = 0.034982227, step = 501 (2.546 sec)
-INFO:tensorflow:global_step/sec: 8.318
-INFO:tensorflow:loss = 0.123239204, step = 521 (2.402 sec)
-INFO:tensorflow:global_step/sec: 8.191
-INFO:tensorflow:loss = 0.04369303, step = 541 (2.442 sec)
-INFO:tensorflow:global_step/sec: 8.56235
-INFO:tensorflow:loss = 0.039757263, step = 561 (2.336 sec)
-INFO:tensorflow:global_step/sec: 8.65219
-INFO:tensorflow:loss = 0.025280315, step = 581 (2.311 sec)
-INFO:tensorflow:Saving checkpoints for 583 into cnnmodel_dir\model.ckpt.
-INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (100 secs).
+INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (50 secs).
+INFO:tensorflow:global_step/sec: 5.74487
+INFO:tensorflow:loss = 0.41932988, step = 261 (3.481 sec)
+INFO:tensorflow:global_step/sec: 6.52249
+INFO:tensorflow:loss = 0.1843961, step = 281 (3.066 sec)
+INFO:tensorflow:Saving checkpoints for 300 into cnnmodel_dir\model.ckpt.
+INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (50 secs).
+INFO:tensorflow:global_step/sec: 6.00402
+INFO:tensorflow:loss = 0.14570433, step = 301 (3.331 sec)
+INFO:tensorflow:global_step/sec: 6.35644
+INFO:tensorflow:loss = 0.22580437, step = 321 (3.146 sec)
+INFO:tensorflow:global_step/sec: 6.54708
+INFO:tensorflow:loss = 0.33146867, step = 341 (3.055 sec)
+INFO:tensorflow:Saving checkpoints for 350 into cnnmodel_dir\model.ckpt.
 INFO:tensorflow:Calling model_fn.
 INFO:tensorflow:Done calling model_fn.
-INFO:tensorflow:Starting evaluation at 2020-02-05T17:04:45Z
+INFO:tensorflow:Starting evaluation at 2020-02-07T21:06:00Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from cnnmodel_dir\model.ckpt-350
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-07-21:06:01
+INFO:tensorflow:Saving dict for global step 350: acc = 0.8690987, auc = 0.93631816, global_step = 350, loss = 0.32633024
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 350: cnnmodel_dir\model.ckpt-350
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from cnnmodel_dir\model.ckpt-350
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: cnnmodel_dir\export\exporter\temp-b'1581127561'\saved_model.pb
+INFO:tensorflow:global_step/sec: 3.42393
+INFO:tensorflow:loss = 0.07828988, step = 361 (5.840 sec)
+INFO:tensorflow:global_step/sec: 6.38322
+INFO:tensorflow:loss = 0.26389933, step = 381 (3.133 sec)
+INFO:tensorflow:Saving checkpoints for 400 into cnnmodel_dir\model.ckpt.
+INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (50 secs).
+INFO:tensorflow:global_step/sec: 5.91468
+INFO:tensorflow:loss = 0.12394296, step = 401 (3.382 sec)
+INFO:tensorflow:global_step/sec: 6.30191
+INFO:tensorflow:loss = 0.17847446, step = 421 (3.174 sec)
+INFO:tensorflow:global_step/sec: 6.33454
+INFO:tensorflow:loss = 0.0316416, step = 441 (3.157 sec)
+INFO:tensorflow:Saving checkpoints for 450 into cnnmodel_dir\model.ckpt.
+INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (50 secs).
+INFO:tensorflow:global_step/sec: 5.73592
+INFO:tensorflow:loss = 0.18246567, step = 461 (3.487 sec)
+INFO:tensorflow:global_step/sec: 6.46944
+INFO:tensorflow:loss = 0.08451287, step = 481 (3.091 sec)
+INFO:tensorflow:Saving checkpoints for 500 into cnnmodel_dir\model.ckpt.
+INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (50 secs).
+INFO:tensorflow:global_step/sec: 5.97756
+INFO:tensorflow:loss = 0.30553034, step = 501 (3.346 sec)
+INFO:tensorflow:global_step/sec: 6.30789
+INFO:tensorflow:loss = 0.14200838, step = 521 (3.170 sec)
+INFO:tensorflow:global_step/sec: 6.21756
+INFO:tensorflow:loss = 0.12938425, step = 541 (3.218 sec)
+INFO:tensorflow:Saving checkpoints for 550 into cnnmodel_dir\model.ckpt.
+INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (50 secs).
+INFO:tensorflow:global_step/sec: 5.71817
+INFO:tensorflow:loss = 0.04019575, step = 561 (3.498 sec)
+INFO:tensorflow:global_step/sec: 6.42762
+INFO:tensorflow:loss = 0.05679126, step = 581 (3.111 sec)
+INFO:tensorflow:Saving checkpoints for 583 into cnnmodel_dir\model.ckpt.
+INFO:tensorflow:Skip the current checkpoint eval due to throttle secs (50 secs).
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-07T21:06:40Z
 INFO:tensorflow:Graph was finalized.
 INFO:tensorflow:Restoring parameters from cnnmodel_dir\model.ckpt-583
 INFO:tensorflow:Running local_init_op.
 INFO:tensorflow:Done running local_init_op.
-INFO:tensorflow:Finished evaluation at 2020-02-05-17:04:46
-INFO:tensorflow:Saving dict for global step 583: acc = 0.90450644, auc = 0.9592079, global_step = 583, loss = 0.2712294
+INFO:tensorflow:Finished evaluation at 2020-02-07-21:06:42
+INFO:tensorflow:Saving dict for global step 583: acc = 0.87660944, auc = 0.938493, global_step = 583, loss = 0.36393392
 INFO:tensorflow:Saving 'checkpoint_path' summary for global step 583: cnnmodel_dir\model.ckpt-583
 INFO:tensorflow:Calling model_fn.
 INFO:tensorflow:Done calling model_fn.
@@ -173,5 +205,5 @@ INFO:tensorflow:Signatures INCLUDED in export for Eval: None
 INFO:tensorflow:Restoring parameters from cnnmodel_dir\model.ckpt-583
 INFO:tensorflow:Assets added to graph.
 INFO:tensorflow:No assets to write.
-INFO:tensorflow:SavedModel written to: cnnmodel_dir\export\exporter\temp-b'1580940286'\saved_model.pb
-INFO:tensorflow:Loss for final step: 0.10853754.
+INFO:tensorflow:SavedModel written to: cnnmodel_dir\export\exporter\temp-b'1581127602'\saved_model.pb
+INFO:tensorflow:Loss for final step: 0.24738036.
