@@ -287,3 +287,21 @@ estimator Attention/attentionmd_dir/model.ckpt-900.index
 estimator Attention/attentionmd_dir/model.ckpt-900.meta
 estimator Attention/training log/train_estimator_log_0207_2033.txt
 estimator Attention/training log/train_estimator_log_0207_2034.txt
+estimator CNN/cnnmodel_dir/eval/events.out.tfevents.1581127510.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/events.out.tfevents.1581127497.LAPTOP-42K07IEA
+estimator CNN/cnnmodel_dir/export/exporter/1581127510/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1581127510/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1581127510/variables/variables.index
+estimator CNN/cnnmodel_dir/export/exporter/1581127561/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1581127561/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1581127561/variables/variables.index
+estimator CNN/cnnmodel_dir/export/exporter/1581127602/saved_model.pb
+estimator CNN/cnnmodel_dir/export/exporter/1581127602/variables/variables.data-00000-of-00001
+estimator CNN/cnnmodel_dir/export/exporter/1581127602/variables/variables.index
+estimator CNN/cnnmodel_dir/model.ckpt-450.data-00000-of-00001
+estimator CNN/cnnmodel_dir/model.ckpt-450.index
+estimator CNN/cnnmodel_dir/model.ckpt-450.meta
+estimator CNN/cnnmodel_dir/model.ckpt-550.data-00000-of-00001
+estimator CNN/cnnmodel_dir/model.ckpt-550.index
+estimator CNN/cnnmodel_dir/model.ckpt-550.meta
+estimator CNN/training log/train_estimator_log_0207_2104.txt

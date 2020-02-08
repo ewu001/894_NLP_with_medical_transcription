@@ -50,7 +50,7 @@ def serving_input_fn():
     # Defines the features to be passed to the model during inference 
     # Expects already tokenized and padded representation of sentences
 
-    feature_placeholder = tf.placeholder(tf.int16, [None, MAX_SEQUENCE_LENGTH])
+    feature_placeholder = tf.placeholder(tf.float32, [None, MAX_SEQUENCE_LENGTH])
     features = feature_placeholder
     return tf.estimator.export.TensorServingInputReceiver(features, feature_placeholder)
 
