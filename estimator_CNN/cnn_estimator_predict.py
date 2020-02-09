@@ -10,9 +10,6 @@ import argparse
 MAX_SEQUENCE_LENGTH = 500
 export_model_path = 'cnnmodel_dir/export/exporter/'
 
-def accuracy_percentage(x, y):
-    return (100.0 * len(set(x) & set(y))) / len(set(x) | set(y))
-
 if __name__ == '__main__':
     # parse command line argument for hyper parameter input
     parser = argparse.ArgumentParser()
@@ -52,7 +49,7 @@ if __name__ == '__main__':
     # JSON format the requests
     request_data = requests_tokenized.tolist()
 
-   # print(request_data[439, 493])
+   # print(request_data[439, 493])  
 
     predict_fn = tf.contrib.predictor.from_saved_model(export_model_path+model_id)
     predictions = predict_fn({"input": request_data})
