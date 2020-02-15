@@ -54,7 +54,7 @@ def serving_input_fn():
     features = feature_placeholder
     return tf.estimator.export.TensorServingInputReceiver(features, feature_placeholder)
 
-def cnn_estimator(model_dir, config, learning_rate, embedding_dim, filters, dropout_rate, kernel_size, pool_size, word_index=None, embedding_path=None):
+def cnn_estimator(model_version, model_dir, config, learning_rate, embedding_dim, filters, dropout_rate, kernel_size, pool_size, word_index=None, embedding_path=None):
 
     input_dim = min(len(word_index)+1, VOCAB_SIZE)
 
@@ -65,13 +65,26 @@ def cnn_estimator(model_dir, config, learning_rate, embedding_dim, filters, drop
     else:
         embedding_matrix = None
     
-    cnnmodel = cnn_estimator_model.cnn_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, 
+    if model_version == 'cnn_base':
+        cnnmodel = cnn_estimator_model.cnn_model_basic(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, 
                                 filters, dropout_rate, kernel_size, pool_size,
                                 embedding=embedding_matrix, word_index=word_index)
-
-
+    elif model_version == 'cnn_2':
+        cnnmodel = cnn_estimator_model.cnn_model_2(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, 
+                                filters, dropout_rate, kernel_size, pool_size,
+                                embedding=embedding_matrix, word_index=word_index)
+    elif model_version == 'cnn_3':
+        cnnmodel = cnn_estimator_model.cnn_model_3(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, 
+                                filters, dropout_rate, kernel_size, pool_size,
+                                embedding=embedding_matrix, word_index=word_index)
+    else:
+        print("Incorrect model version specified")
+        return 
+            
+    metrics_list = ['acc', tf.keras.metrics.AUC(), tf.keras.metrics.Precision(), tf.keras.metrics.Recall()]
     adamOptimizer = tf.keras.optimizers.Adam(lr=learning_rate)
-    cnnmodel.compile(optimizer=adamOptimizer, loss='binary_crossentropy', clipnorm=1.0, metrics=['acc', tf.keras.metrics.AUC()])
+
+    cnnmodel.compile(optimizer=adamOptimizer, loss='binary_crossentropy', clipnorm=1.0, metrics=metrics_list)
     estimator = tf.keras.estimator.model_to_estimator(keras_model=cnnmodel, model_dir=model_dir, config=config)
     return estimator
 
@@ -102,7 +115,7 @@ def train_and_evaluate(output_dir, hparams):
                                         log_step_count_steps = 20,
                                         save_summary_steps = 50
                                     )
-    estimator = cnn_estimator(output_dir, run_config,
+    estimator = cnn_estimator(hparams['model_version'], output_dir, run_config,
                                 hparams['learning_rate'],
                                 EMBEDDING_DIM,
                                 hparams['filters'],
@@ -122,8 +135,7 @@ def train_and_evaluate(output_dir, hparams):
             hparams['batch_size'], mode=tf.estimator.ModeKeys.EVAL), 
             steps=None, 
             exporters=exporter,
-            start_delay_secs=50,
-            throttle_secs = EVAL_INTERVAL)  # evaluate every N seconds
+            throttle_secs = 5)  # evaluate every N seconds
 
     tf.estimator.train_and_evaluate(estimator, train_spec, eval_spec)
     return True

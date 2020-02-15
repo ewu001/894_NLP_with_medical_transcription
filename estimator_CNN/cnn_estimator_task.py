@@ -74,6 +74,11 @@ if __name__ == '__main__':
         default=0.2,
         type=float
     )
+    parser.add_argument(
+        '--model_version',
+        help='Specify the version of the convolutional model to train, [cnn_base, cnn_2, cnn_3]',
+        required=True
+    )
 #, pool_size
 
 

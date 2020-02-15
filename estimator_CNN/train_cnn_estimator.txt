@@ -1,0 +1,34 @@
+# Train with pre-train embedding GloVe 6B 200, on cnn base model
+python -m cnn_estimator_task --model_version=cnn_base --output_dir=cnnmodel_base_dir --num_epochs=5 \
+    --batch_size=32 --learning_rate=0.001 --vocab_size=50000 --max_sequence_length=500 \
+    --embedding_path=embedding/glove.6B.200d.txt --embedding_dim=200 --filters=48 --kernel_size=3 \
+    --pool_size=2 --dropout_rate=0.3
+
+# One line command
+python -m cnn_estimator_task --model_version=cnn_base --output_dir=cnnmodel_dir --num_epochs=5 --batch_size=32 --learning_rate=0.001 --vocab_size=50000 --max_sequence_length=500 --embedding_path=embedding/glove.6B.200d.txt --embedding_dim=200 --filters=48 --kernel_size=3 --pool_size=2 --dropout_rate=0.3
+
+# Train with pre-train embedding GloVe 6B 200, on cnn version 2 model
+python -m cnn_estimator_task --model_version=cnn_2 --output_dir=cnnmodel_2_dir --num_epochs=5 \
+    --batch_size=32 --learning_rate=0.001 --vocab_size=50000 --max_sequence_length=500 \
+    --embedding_path=embedding/glove.6B.200d.txt --embedding_dim=200 --filters=48 --kernel_size=3 \
+    --pool_size=2 --dropout_rate=0.3
+
+# One line command
+python -m cnn_estimator_task --model_version=cnn_2 --output_dir=cnnmodel_2_dir --num_epochs=5 --batch_size=32 --learning_rate=0.001 --vocab_size=50000 --max_sequence_length=500 --embedding_path=embedding/glove.6B.200d.txt --embedding_dim=200 --filters=48 --kernel_size=3 --pool_size=2 --dropout_rate=0.3
+
+# Train with pre-train embedding GloVe 6B 200, on cnn version 3 model
+python -m cnn_estimator_task --model_version=cnn_3 --output_dir=cnnmodel_3_dir --num_epochs=5 \
+    --batch_size=32 --learning_rate=0.001 --vocab_size=50000 --max_sequence_length=500 \
+    --embedding_path=embedding/glove.6B.200d.txt --embedding_dim=200 --filters=48 --kernel_size=3 \
+    --pool_size=2 --dropout_rate=0.3
+
+# One line command:
+python -m cnn_estimator_task --model_version=cnn_3 --output_dir=cnnmodel_3_dir --num_epochs=5 --batch_size=32 --learning_rate=0.001 --vocab_size=50000 --max_sequence_length=500 --embedding_path=embedding/glove.6B.200d.txt --embedding_dim=200 --filters=48 --kernel_size=3 --pool_size=2 --dropout_rate=0.3
+
+# Activate tensorboard and view performances of all models:
+# tensorboard --host 127.0.0.1 --logdir=cnnmodel_dir
+# tensorboard --host 127.0.0.1 --logdir=cnnmodel_2_dir
+# tensorboard --host 127.0.0.1 --logdir=cnnmodel_3_dir
+
+# This will be moved to docker container soon
+python -m cnn_estimator_predict --model_id=1581127602

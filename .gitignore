@@ -445,3 +445,104 @@ estimator_CNN/cnnmodel_dir/export/exporter/1581175120/saved_model.pb
 estimator_CNN/cnnmodel_dir/export/exporter/1581175120/variables/variables.data-00000-of-00001
 estimator_CNN/cnnmodel_dir/export/exporter/1581175120/variables/variables.index
 estimator_CNN/training log/train_estimator_log_0208_1016.txt
+estimator_CNN/cnnmodel_2_dir/checkpoint
+estimator_CNN/cnnmodel_2_dir/eval/events.out.tfevents.1581735500.LAPTOP-42K07IEA
+estimator_CNN/cnnmodel_2_dir/events.out.tfevents.1581735485.LAPTOP-42K07IEA
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735580/saved_model.pb
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735580/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735580/variables/variables.index
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735594/saved_model.pb
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735594/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735594/variables/variables.index
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735605/saved_model.pb
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735605/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735605/variables/variables.index
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735616/saved_model.pb
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735616/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735616/variables/variables.index
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735624/saved_model.pb
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735624/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_2_dir/export/exporter/1581735624/variables/variables.index
+estimator_CNN/cnnmodel_2_dir/graph.pbtxt
+estimator_CNN/cnnmodel_2_dir/keras/checkpoint
+estimator_CNN/cnnmodel_2_dir/keras/keras_model.ckpt.data-00000-of-00001
+estimator_CNN/cnnmodel_2_dir/keras/keras_model.ckpt.index
+estimator_CNN/cnnmodel_2_dir/keras/keras_model.ckpt.meta
+estimator_CNN/cnnmodel_2_dir/model.ckpt-400.data-00000-of-00001
+estimator_CNN/cnnmodel_2_dir/model.ckpt-400.index
+estimator_CNN/cnnmodel_2_dir/model.ckpt-400.meta
+estimator_CNN/cnnmodel_2_dir/model.ckpt-450.data-00000-of-00001
+estimator_CNN/cnnmodel_2_dir/model.ckpt-450.index
+estimator_CNN/cnnmodel_2_dir/model.ckpt-450.meta
+estimator_CNN/cnnmodel_2_dir/model.ckpt-500.data-00000-of-00001
+estimator_CNN/cnnmodel_2_dir/model.ckpt-500.index
+estimator_CNN/cnnmodel_2_dir/model.ckpt-500.meta
+estimator_CNN/cnnmodel_2_dir/model.ckpt-550.data-00000-of-00001
+estimator_CNN/cnnmodel_2_dir/model.ckpt-550.index
+estimator_CNN/cnnmodel_2_dir/model.ckpt-550.meta
+estimator_CNN/cnnmodel_2_dir/model.ckpt-583.data-00000-of-00001
+estimator_CNN/cnnmodel_2_dir/model.ckpt-583.index
+estimator_CNN/cnnmodel_2_dir/model.ckpt-583.meta
+estimator_CNN/cnnmodel_3_dir/checkpoint
+estimator_CNN/cnnmodel_3_dir/eval/events.out.tfevents.1581735988.LAPTOP-42K07IEA
+estimator_CNN/cnnmodel_3_dir/events.out.tfevents.1581735974.LAPTOP-42K07IEA
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736067/saved_model.pb
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736067/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736067/variables/variables.index
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736079/saved_model.pb
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736079/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736079/variables/variables.index
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736090/saved_model.pb
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736090/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736090/variables/variables.index
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736101/saved_model.pb
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736101/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736101/variables/variables.index
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736111/saved_model.pb
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736111/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_3_dir/export/exporter/1581736111/variables/variables.index
+estimator_CNN/cnnmodel_3_dir/graph.pbtxt
+estimator_CNN/cnnmodel_3_dir/keras/checkpoint
+estimator_CNN/cnnmodel_3_dir/keras/keras_model.ckpt.data-00000-of-00001
+estimator_CNN/cnnmodel_3_dir/keras/keras_model.ckpt.index
+estimator_CNN/cnnmodel_3_dir/keras/keras_model.ckpt.meta
+estimator_CNN/cnnmodel_3_dir/model.ckpt-400.data-00000-of-00001
+estimator_CNN/cnnmodel_3_dir/model.ckpt-400.index
+estimator_CNN/cnnmodel_3_dir/model.ckpt-400.meta
+estimator_CNN/cnnmodel_3_dir/model.ckpt-450.data-00000-of-00001
+estimator_CNN/cnnmodel_3_dir/model.ckpt-450.index
+estimator_CNN/cnnmodel_3_dir/model.ckpt-450.meta
+estimator_CNN/cnnmodel_3_dir/model.ckpt-500.data-00000-of-00001
+estimator_CNN/cnnmodel_3_dir/model.ckpt-500.index
+estimator_CNN/cnnmodel_3_dir/model.ckpt-500.meta
+estimator_CNN/cnnmodel_3_dir/model.ckpt-550.data-00000-of-00001
+estimator_CNN/cnnmodel_3_dir/model.ckpt-550.index
+estimator_CNN/cnnmodel_3_dir/model.ckpt-550.meta
+estimator_CNN/cnnmodel_3_dir/model.ckpt-583.data-00000-of-00001
+estimator_CNN/cnnmodel_3_dir/model.ckpt-583.index
+estimator_CNN/cnnmodel_3_dir/model.ckpt-583.meta
+estimator_CNN/training log/train_estimator_log_0214_2129.txt
+estimator_CNN/training log/train_estimator_log_0214_2132.txt
+estimator_CNN/training log/train_estimator_log_0214_2137.txt
+estimator_CNN/training log/train_estimator_log_0214_2140.txt
+estimator_CNN/training log/train_estimator_log_0214_2157.txt
+estimator_CNN/training log/train_estimator_log_0214_2200.txt
+estimator_CNN/training log/train_estimator_log_0214_2204.txt
+estimator_CNN/training log/train_estimator_log_0214_2205.txt
+estimator_CNN/cnnmodel_dir/export/exporter/1581734579/variables/variables.index
+estimator_CNN/cnnmodel_dir/export/exporter/1581734579/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581734579/saved_model.pb
+estimator_CNN/cnnmodel_dir/export/exporter/1581734572/variables/variables.index
+estimator_CNN/cnnmodel_dir/export/exporter/1581734572/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581734572/saved_model.pb
+estimator_CNN/cnnmodel_dir/export/exporter/1581734564/variables/variables.index
+estimator_CNN/cnnmodel_dir/export/exporter/1581734564/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581734564/saved_model.pb
+estimator_CNN/cnnmodel_dir/export/exporter/1581734554/variables/variables.index
+estimator_CNN/cnnmodel_dir/export/exporter/1581734554/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581734554/saved_model.pb
+estimator_CNN/cnnmodel_dir/export/exporter/1581734545/variables/variables.index
+estimator_CNN/cnnmodel_dir/export/exporter/1581734545/variables/variables.data-00000-of-00001
+estimator_CNN/cnnmodel_dir/export/exporter/1581734545/saved_model.pb
+estimator_CNN/cnnmodel_dir/events.out.tfevents.1581734475.LAPTOP-42K07IEA
+estimator_CNN/cnnmodel_dir/eval/events.out.tfevents.1581734486.LAPTOP-42K07IEA
