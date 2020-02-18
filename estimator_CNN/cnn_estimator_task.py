@@ -11,6 +11,11 @@ if __name__ == '__main__':
         required=True
     )
     parser.add_argument(
+        '--model_version',
+        help='Specify the version of the convolutional model to train, [cnn_base, cnn_2, cnn_3]',
+        required=True
+    )
+    parser.add_argument(
         '--embedding_path',
         help='Optional, path to the embedding location'
     )
@@ -36,6 +41,12 @@ if __name__ == '__main__':
         '--learning_rate',
         help='learning rate for gradient descent, required for model train',
         default=0.00001,
+        type=float
+    )
+    parser.add_argument(
+        '--dropout_rate',
+        help='dropout rate used inside the convolutional network to regularize model from being overfit',
+        default=0.2,
         type=float
     )
     parser.add_argument(
@@ -69,16 +80,27 @@ if __name__ == '__main__':
         type=int
     )
     parser.add_argument(
-        '--dropout_rate',
-        help='dropout rate used inside the convolutional network to regularize model from being overfit',
-        default=0.2,
-        type=float
+        '--strides',
+        help='stride of the filters that applies to the input in layer via convolution operation',
+        default=1,
+        type=int
     )
     parser.add_argument(
-        '--model_version',
-        help='Specify the version of the convolutional model to train, [cnn_base, cnn_2, cnn_3]',
-        required=True
+        '--padding_type',
+        help='choose between same and valid to specify the padding type for applying filters to the input',
+        default='same'
     )
+    parser.add_argument(
+        '--fc_layer_nodes',
+        help='Specify the number of nodes in the fully connected neural network layer after flatten the convolution feature map',
+        type=int
+    )
+    parser.add_argument(
+        '--growth_rate',
+        help='Specify the growth rate to the increase of the filter numbers used between different stages',
+        type=int
+    )
+
 #, pool_size
 
 

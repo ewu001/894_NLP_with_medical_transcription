@@ -54,7 +54,7 @@ def serving_input_fn():
     features = feature_placeholder
     return tf.estimator.export.TensorServingInputReceiver(features, feature_placeholder)
 
-def cnn_estimator(model_version, model_dir, config, learning_rate, embedding_dim, filters, dropout_rate, kernel_size, pool_size, word_index=None, embedding_path=None):
+def cnn_estimator(model_version, model_dir, config, learning_rate, embedding_dim, filters, dropout_rate, kernel_size, pool_size, strides, padding_type, nn_nodes, growth_rate, word_index=None, embedding_path=None):
 
     input_dim = min(len(word_index)+1, VOCAB_SIZE)
 
@@ -67,15 +67,15 @@ def cnn_estimator(model_version, model_dir, config, learning_rate, embedding_dim
     
     if model_version == 'cnn_base':
         cnnmodel = cnn_estimator_model.cnn_model_basic(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, 
-                                filters, dropout_rate, kernel_size, pool_size,
+                                filters, dropout_rate, kernel_size, pool_size, strides, padding_type, growth_rate, nn_nodes,
                                 embedding=embedding_matrix, word_index=word_index)
     elif model_version == 'cnn_2':
         cnnmodel = cnn_estimator_model.cnn_model_2(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, 
-                                filters, dropout_rate, kernel_size, pool_size,
+                                filters, dropout_rate, kernel_size, pool_size, strides, padding_type, growth_rate, nn_nodes,
                                 embedding=embedding_matrix, word_index=word_index)
     elif model_version == 'cnn_3':
         cnnmodel = cnn_estimator_model.cnn_model_3(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, 
-                                filters, dropout_rate, kernel_size, pool_size,
+                                filters, dropout_rate, kernel_size, pool_size, strides, padding_type, growth_rate, nn_nodes,
                                 embedding=embedding_matrix, word_index=word_index)
     else:
         print("Incorrect model version specified")
@@ -122,6 +122,10 @@ def train_and_evaluate(output_dir, hparams):
                                 hparams['dropout_rate'],
                                 hparams['kernel_size'],
                                 hparams['pool_size'],
+                                hparams['strides'],
+                                hparams['padding_type'],
+                                hparams['fc_layer_nodes'],
+                                hparams['growth_rate'],
                                 word_index=tokenizer.word_index,
                                 embedding_path=hparams['embedding_path'])
 
