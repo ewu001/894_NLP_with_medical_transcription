@@ -42,7 +42,7 @@ def extract_transform_load_csv(read_path, export_path):
     processeddf = returndf[returndf['Target'] !=0]
     print('Start pre-processing ')
     processeddf['transcription'] = processeddf['transcription'].apply(lambda x: remove_html(str(x).lower()))
-    processeddf['transcription'] = processeddf['transcription'].apply(lambda x: remove_punctuation(str(x).lower()))
+    processeddf['transcription'] = processeddf['transcription'].apply(lambda x: remove_punctuation(str(x)))
     processeddf['transcription'] = processeddf['transcription'].apply(lambda x: str(x).split(' '))
     processeddf['transcription'] = processeddf['transcription'].apply(lambda x: text_lemmalization(x, WordNetLemmatizer()))
     processeddf['transcription'] = processeddf['transcription'].apply(lambda x: "".join([item + " " for item in x]))
