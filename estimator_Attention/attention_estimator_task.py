@@ -11,6 +11,11 @@ if __name__ == '__main__':
         required=True
     )
     parser.add_argument(
+        '--model_version',
+        help='Specify the version of the convolutional model to train ',
+        required=True
+    )
+    parser.add_argument(
         '--embedding_path',
         help='Optional, path to the embedding location'
     )
@@ -39,6 +44,12 @@ if __name__ == '__main__':
         type=float
     )
     parser.add_argument(
+        '--dropout_rate',
+        help='dropout rate used inside the convolutional network to regularize model from being overfit',
+        default=0.2,
+        type=float
+    )
+    parser.add_argument(
         '--vocab_size',
         help='set the size limit of text corpus used on the tokenization for sentence vocabulary',
         default=50000,
@@ -48,6 +59,11 @@ if __name__ == '__main__':
         '--max_sequence_length',
         help='set the limit of maximum sequence length used for padding',
         default=300,
+        type=int
+    )
+    parser.add_argument(
+        '--lstm_units',
+        help='Specifies the dimension of the LSTM weights',
         type=int
     )
 
