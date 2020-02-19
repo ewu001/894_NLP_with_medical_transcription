@@ -12,7 +12,7 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '--model_version',
-        help='Specify the version of the convolutional model to train ',
+        help='Specify the version of the recurrent model with attention to train. [lstm_attention, gru_attention] ',
         required=True
     )
     parser.add_argument(
@@ -36,6 +36,12 @@ if __name__ == '__main__':
         help='number of records to read during each training step, default to 100',
         default=100,
         type=int
+    )
+    parser.add_argument(
+        '--grad_clip_rate',
+        help='Rate for gradient clipping, to prevent exploding gradient to happen during training',
+        default=1.0,
+        type=float
     )
     parser.add_argument(
         '--learning_rate',
@@ -62,8 +68,8 @@ if __name__ == '__main__':
         type=int
     )
     parser.add_argument(
-        '--lstm_units',
-        help='Specifies the dimension of the LSTM weights',
+        '--rnn_units',
+        help='Specifies the dimension of the RNN weights',
         type=int
     )
 

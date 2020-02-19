@@ -54,7 +54,7 @@ def serving_input_fn():
     features = feature_placeholder
     return tf.estimator.export.TensorServingInputReceiver(features, feature_placeholder)
 
-def attention_estimator(model_dir, config, learning_rate, embedding_dim, word_index=None, embedding_path=None):
+def attention_estimator(model_version, model_dir, config, learning_rate, grad_clip_rate, rnn_units, embedding_dim, dropout_rate, word_index=None, embedding_path=None):
 
     input_dim = min(len(word_index)+1, VOCAB_SIZE)
 
@@ -65,12 +65,21 @@ def attention_estimator(model_dir, config, learning_rate, embedding_dim, word_in
     else:
         embedding_matrix = None
     
-    attention_model = attention_estimator_model.attention_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, lstm_units=32,
+    if model_version == 'lstm_attention':
+        attention_model = attention_estimator_model.attention_LSTM_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, rnn_units, dropout_rate,
                                 embedding=embedding_matrix, word_index=word_index)
+    elif model_version == 'gru_attention':
+        attention_model = attention_estimator_model.attention_GRU_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, rnn_units, dropout_rate,
+                                embedding=embedding_matrix, word_index=word_index)
+    else:
+        print("Incorrect model version specified")
+        return 
 
+    print(attention_model.summary())
+    metrics_list = ['acc', tf.keras.metrics.AUC(), tf.keras.metrics.Precision(), tf.keras.metrics.Recall()]
 
     adamOptimizer = tf.keras.optimizers.Adam(lr=learning_rate)
-    attention_model.compile(optimizer=adamOptimizer, loss='binary_crossentropy', clipnorm=1.0, metrics=['acc', tf.keras.metrics.AUC()])
+    attention_model.compile(optimizer=adamOptimizer, loss='binary_crossentropy', clipnorm=grad_clip_rate, metrics=metrics_list)
     estimator = tf.keras.estimator.model_to_estimator(keras_model=attention_model, model_dir=model_dir, config=config)
     return estimator
 
@@ -101,9 +110,12 @@ def train_and_evaluate(output_dir, hparams):
                                         log_step_count_steps = 20,
                                         save_summary_steps = 50
                                     )
-    estimator = attention_estimator(output_dir, run_config,
+    estimator = attention_estimator(hparams['model_version'], output_dir, run_config,
                                 hparams['learning_rate'],
+                                hparams['grad_clip_rate'],
+                                hparams['rnn_units'],
                                 EMBEDDING_DIM,
+                                hparams['dropout_rate'],
                                 word_index=tokenizer.word_index,
                                 embedding_path=hparams['embedding_path'])
 

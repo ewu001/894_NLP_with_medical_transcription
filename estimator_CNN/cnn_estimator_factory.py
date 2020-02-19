@@ -54,7 +54,7 @@ def serving_input_fn():
     features = feature_placeholder
     return tf.estimator.export.TensorServingInputReceiver(features, feature_placeholder)
 
-def cnn_estimator(model_version, model_dir, config, learning_rate, embedding_dim, filters, dropout_rate, kernel_size, pool_size, strides, padding_type, nn_nodes, growth_rate, word_index=None, embedding_path=None):
+def cnn_estimator(model_version, model_dir, config, learning_rate, grad_clip_rate, embedding_dim, filters, dropout_rate, kernel_size, pool_size, strides, padding_type, nn_nodes, growth_rate, word_index=None, embedding_path=None):
 
     input_dim = min(len(word_index)+1, VOCAB_SIZE)
 
@@ -84,7 +84,7 @@ def cnn_estimator(model_version, model_dir, config, learning_rate, embedding_dim
     metrics_list = ['acc', tf.keras.metrics.AUC(), tf.keras.metrics.Precision(), tf.keras.metrics.Recall()]
     adamOptimizer = tf.keras.optimizers.Adam(lr=learning_rate)
 
-    cnnmodel.compile(optimizer=adamOptimizer, loss='binary_crossentropy', clipnorm=1.0, metrics=metrics_list)
+    cnnmodel.compile(optimizer=adamOptimizer, loss='binary_crossentropy', clipnorm=grad_clip_rate, metrics=metrics_list)
     estimator = tf.keras.estimator.model_to_estimator(keras_model=cnnmodel, model_dir=model_dir, config=config)
     return estimator
 
@@ -117,6 +117,7 @@ def train_and_evaluate(output_dir, hparams):
                                     )
     estimator = cnn_estimator(hparams['model_version'], output_dir, run_config,
                                 hparams['learning_rate'],
+                                hparams['grad_clip_rate'],
                                 EMBEDDING_DIM,
                                 hparams['filters'],
                                 hparams['dropout_rate'],

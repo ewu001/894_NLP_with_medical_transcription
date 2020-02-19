@@ -44,6 +44,12 @@ if __name__ == '__main__':
         type=float
     )
     parser.add_argument(
+        '--grad_clip_rate',
+        help='Rate for gradient clipping, to prevent exploding gradient to happen during training',
+        default=1.0,
+        type=float
+    )
+    parser.add_argument(
         '--dropout_rate',
         help='dropout rate used inside the convolutional network to regularize model from being overfit',
         default=0.2,

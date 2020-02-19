@@ -1,0 +1,527 @@
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\keras\initializers.py:119: calling RandomUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\ops\resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\ops\init_ops.py:97: calling GlorotUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\ops\init_ops.py:97: calling Orthogonal.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\ops\init_ops.py:97: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+INFO:tensorflow:Using the Keras model provided.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\ops\math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+INFO:tensorflow:Using config: {'_model_dir': 'attention_lstm_dir', '_tf_random_seed': None, '_save_summary_steps': 50, '_save_checkpoints_steps': 50, '_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 20, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x00000158852C9F60>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+WARNING:tensorflow:From C:\Users\junsh\Documents\GitHub\MMAI894_deeplearning\estimator_Attention\attention_estimator_factory.py:44: The name tf.estimator.inputs is deprecated. Please use tf.compat.v1.estimator.inputs instead.
+
+WARNING:tensorflow:From C:\Users\junsh\Documents\GitHub\MMAI894_deeplearning\estimator_Attention\attention_estimator_factory.py:44: The name tf.estimator.inputs.numpy_input_fn is deprecated. Please use tf.compat.v1.estimator.inputs.numpy_input_fn instead.
+
+INFO:tensorflow:Not using Distribute Coordinator.
+INFO:tensorflow:Running training and evaluation locally (non-distributed).
+INFO:tensorflow:Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps 50 or save_checkpoints_secs None.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\training\training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\inputs\queues\feeding_queue_runner.py:62: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\inputs\queues\feeding_functions.py:500: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Warm-starting with WarmStartSettings: WarmStartSettings(ckpt_to_initialize_from='attention_lstm_dir\\keras\\keras_model.ckpt', vars_to_warm_start='.*', var_name_to_vocab_info={}, var_name_to_prev_var_name={})
+INFO:tensorflow:Warm-starting from: attention_lstm_dir\keras\keras_model.ckpt
+INFO:tensorflow:Warm-starting variables only in TRAINABLE_VARIABLES.
+INFO:tensorflow:Warm-started 14 variables.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py:882: start_queue_runners (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+INFO:tensorflow:Saving checkpoints for 0 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:loss = 0.63340926, step = 1
+INFO:tensorflow:global_step/sec: 0.997072
+INFO:tensorflow:loss = 0.6867581, step = 21 (20.060 sec)
+INFO:tensorflow:global_step/sec: 1.11947
+INFO:tensorflow:loss = 0.5579759, step = 41 (17.865 sec)
+INFO:tensorflow:Saving checkpoints for 50 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T14:58:55Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-50
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-14:59:10
+INFO:tensorflow:Saving dict for global step 50: acc = 0.5032189, auc = 0.58254313, global_step = 50, loss = 0.73220956
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 50: attention_lstm_dir\model.ckpt-50
+WARNING:tensorflow:From C:\Users\junsh\Documents\GitHub\MMAI894_deeplearning\estimator_Attention\attention_estimator_factory.py:53: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\saved_model\signature_def_utils_impl.py:201: build_tensor_info (from tensorflow.python.saved_model.utils_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This function will only be available through the v1 compatibility library as tf.compat.v1.saved_model.utils.build_tensor_info or tf.compat.v1.saved_model.build_tensor_info.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-50
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582142350'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.525938
+INFO:tensorflow:loss = 0.50514483, step = 61 (38.028 sec)
+INFO:tensorflow:global_step/sec: 0.93773
+INFO:tensorflow:loss = 0.5019169, step = 81 (21.328 sec)
+INFO:tensorflow:Saving checkpoints for 100 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:00:05Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-100
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:00:23
+INFO:tensorflow:Saving dict for global step 100: acc = 0.639485, auc = 0.6977328, global_step = 100, loss = 0.63263226
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 100: attention_lstm_dir\model.ckpt-100
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-100
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582142423'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.489502
+INFO:tensorflow:loss = 0.6280625, step = 101 (40.858 sec)
+INFO:tensorflow:global_step/sec: 0.96028
+INFO:tensorflow:loss = 0.6237917, step = 121 (20.827 sec)
+INFO:tensorflow:global_step/sec: 0.867613
+INFO:tensorflow:loss = 0.58579373, step = 141 (23.052 sec)
+INFO:tensorflow:Saving checkpoints for 150 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:01:20Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-150
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:01:38
+INFO:tensorflow:Saving dict for global step 150: acc = 0.666309, auc = 0.7147667, global_step = 150, loss = 0.6230712
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 150: attention_lstm_dir\model.ckpt-150
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-150
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582142498'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.454121
+INFO:tensorflow:loss = 0.4725373, step = 161 (44.041 sec)
+INFO:tensorflow:global_step/sec: 0.715774
+INFO:tensorflow:loss = 0.7938181, step = 181 (27.948 sec)
+INFO:tensorflow:Saving checkpoints for 200 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:02:46Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:03:07
+INFO:tensorflow:Saving dict for global step 200: acc = 0.667382, auc = 0.7204694, global_step = 200, loss = 0.61987644
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 200: attention_lstm_dir\model.ckpt-200
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-200
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582142587'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.416925
+INFO:tensorflow:loss = 0.5458314, step = 201 (47.965 sec)
+INFO:tensorflow:global_step/sec: 0.775654
+INFO:tensorflow:loss = 0.5120424, step = 221 (25.784 sec)
+INFO:tensorflow:global_step/sec: 0.747946
+INFO:tensorflow:loss = 0.55527335, step = 241 (26.740 sec)
+INFO:tensorflow:Saving checkpoints for 250 into attention_lstm_dir\model.ckpt.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\training\saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:04:14Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-250
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:04:33
+INFO:tensorflow:Saving dict for global step 250: acc = 0.5751073, auc = 0.6579987, global_step = 250, loss = 0.7374092
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 250: attention_lstm_dir\model.ckpt-250
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-250
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582142673'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.435864
+INFO:tensorflow:loss = 0.36960125, step = 261 (45.885 sec)
+INFO:tensorflow:global_step/sec: 0.800499
+INFO:tensorflow:loss = 0.6278533, step = 281 (24.985 sec)
+INFO:tensorflow:Saving checkpoints for 300 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:05:37Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-300
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:05:55
+INFO:tensorflow:Saving dict for global step 300: acc = 0.53648067, auc = 0.6211835, global_step = 300, loss = 0.8632266
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 300: attention_lstm_dir\model.ckpt-300
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-300
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582142755'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.449915
+INFO:tensorflow:loss = 0.8757481, step = 301 (44.453 sec)
+INFO:tensorflow:global_step/sec: 0.800437
+INFO:tensorflow:loss = 0.60122895, step = 321 (24.985 sec)
+INFO:tensorflow:global_step/sec: 0.82837
+INFO:tensorflow:loss = 0.4421249, step = 341 (24.146 sec)
+INFO:tensorflow:Saving checkpoints for 350 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:07:01Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-350
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:07:20
+INFO:tensorflow:Saving dict for global step 350: acc = 0.6287554, auc = 0.6847129, global_step = 350, loss = 0.6646897
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 350: attention_lstm_dir\model.ckpt-350
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-350
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582142840'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.415819
+INFO:tensorflow:loss = 0.4449162, step = 361 (48.097 sec)
+INFO:tensorflow:global_step/sec: 0.850277
+INFO:tensorflow:loss = 0.46074823, step = 381 (23.521 sec)
+INFO:tensorflow:Saving checkpoints for 400 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:08:21Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:08:40
+INFO:tensorflow:Saving dict for global step 400: acc = 0.7113734, auc = 0.7483836, global_step = 400, loss = 0.605143
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 400: attention_lstm_dir\model.ckpt-400
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-400
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582142920'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.455059
+INFO:tensorflow:loss = 0.54317725, step = 401 (43.951 sec)
+INFO:tensorflow:global_step/sec: 0.816411
+INFO:tensorflow:loss = 0.44805586, step = 421 (24.501 sec)
+INFO:tensorflow:global_step/sec: 0.867851
+INFO:tensorflow:loss = 0.6202218, step = 441 (23.041 sec)
+INFO:tensorflow:Saving checkpoints for 450 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:09:42Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-450
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:10:00
+INFO:tensorflow:Saving dict for global step 450: acc = 0.7156652, auc = 0.7669424, global_step = 450, loss = 0.58910835
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 450: attention_lstm_dir\model.ckpt-450
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-450
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582143000'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.435492
+INFO:tensorflow:loss = 0.45626563, step = 461 (45.926 sec)
+INFO:tensorflow:global_step/sec: 0.808814
+INFO:tensorflow:loss = 0.5776057, step = 481 (24.727 sec)
+INFO:tensorflow:Saving checkpoints for 500 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:11:04Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-500
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:11:22
+INFO:tensorflow:Saving dict for global step 500: acc = 0.6802575, auc = 0.7423172, global_step = 500, loss = 0.61479926
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 500: attention_lstm_dir\model.ckpt-500
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-500
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582143082'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.455114
+INFO:tensorflow:loss = 0.5550331, step = 501 (43.950 sec)
+INFO:tensorflow:global_step/sec: 0.837524
+INFO:tensorflow:loss = 0.6077309, step = 521 (23.876 sec)
+INFO:tensorflow:global_step/sec: 0.781689
+INFO:tensorflow:loss = 0.5837263, step = 541 (25.585 sec)
+INFO:tensorflow:Saving checkpoints for 550 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:12:25Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-550
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:12:44
+INFO:tensorflow:Saving dict for global step 550: acc = 0.7532189, auc = 0.79634917, global_step = 550, loss = 0.5517043
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 550: attention_lstm_dir\model.ckpt-550
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-550
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582143164'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.442321
+INFO:tensorflow:loss = 0.57057416, step = 561 (45.216 sec)
+INFO:tensorflow:global_step/sec: 0.816859
+INFO:tensorflow:loss = 0.54800224, step = 581 (24.485 sec)
+INFO:tensorflow:Saving checkpoints for 600 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:13:49Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:14:07
+INFO:tensorflow:Saving dict for global step 600: acc = 0.75965667, auc = 0.7974836, global_step = 600, loss = 0.5727781
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 600: attention_lstm_dir\model.ckpt-600
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-600
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582143247'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.43345
+INFO:tensorflow:loss = 0.33208743, step = 601 (46.141 sec)
+INFO:tensorflow:global_step/sec: 0.875261
+INFO:tensorflow:loss = 0.5044067, step = 621 (22.849 sec)
+INFO:tensorflow:global_step/sec: 0.834542
+INFO:tensorflow:loss = 0.5484415, step = 641 (23.966 sec)
+INFO:tensorflow:Saving checkpoints for 650 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:15:08Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-650
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:15:27
+INFO:tensorflow:Saving dict for global step 650: acc = 0.76180255, auc = 0.8123158, global_step = 650, loss = 0.53604364
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 650: attention_lstm_dir\model.ckpt-650
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-650
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582143327'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.435894
+INFO:tensorflow:loss = 0.6559682, step = 661 (45.883 sec)
+INFO:tensorflow:global_step/sec: 0.797663
+INFO:tensorflow:loss = 0.47910345, step = 681 (25.086 sec)
+INFO:tensorflow:Saving checkpoints for 700 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:16:31Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-700
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:16:49
+INFO:tensorflow:Saving dict for global step 700: acc = 0.7564378, auc = 0.7898215, global_step = 700, loss = 0.573197
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 700: attention_lstm_dir\model.ckpt-700
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-700
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582143409'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.450383
+INFO:tensorflow:loss = 0.3424675, step = 701 (44.394 sec)
+INFO:tensorflow:global_step/sec: 0.878866
+INFO:tensorflow:loss = 0.33909693, step = 721 (22.756 sec)
+INFO:tensorflow:global_step/sec: 0.872037
+INFO:tensorflow:loss = 0.570652, step = 741 (22.936 sec)
+INFO:tensorflow:Saving checkpoints for 750 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:17:49Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-750
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:18:09
+INFO:tensorflow:Saving dict for global step 750: acc = 0.7639485, auc = 0.7995634, global_step = 750, loss = 0.5744836
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 750: attention_lstm_dir\model.ckpt-750
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-750
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582143489'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.427553
+INFO:tensorflow:loss = 0.5458562, step = 761 (46.778 sec)
+INFO:tensorflow:global_step/sec: 0.594884
+INFO:tensorflow:loss = 0.34097654, step = 781 (33.620 sec)
+INFO:tensorflow:Saving checkpoints for 800 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:19:22Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:19:41
+INFO:tensorflow:Saving dict for global step 800: acc = 0.69849783, auc = 0.75177693, global_step = 800, loss = 0.6049876
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 800: attention_lstm_dir\model.ckpt-800
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-800
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582143581'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.444348
+INFO:tensorflow:loss = 0.4145651, step = 801 (45.010 sec)
+INFO:tensorflow:global_step/sec: 0.774213
+INFO:tensorflow:loss = 0.60749495, step = 821 (25.833 sec)
+INFO:tensorflow:global_step/sec: 0.810741
+INFO:tensorflow:loss = 0.27782616, step = 841 (24.673 sec)
+INFO:tensorflow:Saving checkpoints for 850 into attention_lstm_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-19T15:20:46Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-850
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-19-15:21:06
+INFO:tensorflow:Saving dict for global step 850: acc = 0.7693133, auc = 0.81511277, global_step = 850, loss = 0.5461426
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 850: attention_lstm_dir\model.ckpt-850
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from attention_lstm_dir\model.ckpt-850
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: attention_lstm_dir\export\exporter\temp-b'1582143666'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.427992
+INFO:tensorflow:loss = 0.42066526, step = 861 (46.725 sec)
+INFO:tensorflow:global_step/sec: 0.793251
+INFO:tensorflow:loss = 0.42245013, step = 881 (25.213 sec)
