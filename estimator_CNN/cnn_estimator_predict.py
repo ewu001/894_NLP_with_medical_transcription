@@ -8,7 +8,7 @@ import argparse
 
 
 MAX_SEQUENCE_LENGTH = 500
-export_model_path = 'cnnmodel_dir/export/exporter/'
+export_model_path = '/export/exporter/'
 
 if __name__ == '__main__':
     # parse command line argument for hyper parameter input
@@ -18,11 +18,16 @@ if __name__ == '__main__':
         help='ID of the export trained model',
         required=True
     )
+    parser.add_argument(
+        '--model_dir',
+        help='location and directory of the export trained model, only the name of the directory is required',
+        required=True
+    )
 
     args, _ = parser.parse_known_args()
     hparams = args.__dict__
     model_id = hparams.pop('model_id')
-
+    model_dir = hparams.pop('model_dir')
 
     urgent=[
     'This 5-year-old male presents to Children’s Hospital Emergency Department by the mother with "have asthma." Mother states he has been wheezing and coughing. They saw their primary medical doctor. He was evaluated at the clinic, given the breathing treatment and discharged home, was not having asthma, prescribed prednisone and an antibiotic. They told to go to the ER if he got worse. He has had some vomiting and some abdominal pain. His peak flows on the morning are normal at 150, but in the morning, they were down to 100 and subsequently decreased to 75 over the course of the day.',
@@ -45,13 +50,12 @@ if __name__ == '__main__':
     requests_tokenized = tokenizer.texts_to_sequences(request)
     requests_tokenized = tf.keras.preprocessing.sequence.pad_sequences(requests_tokenized,maxlen=MAX_SEQUENCE_LENGTH)
 
-    #print(requests_tokenized.tolist())
     # JSON format the requests
     request_data = requests_tokenized.tolist()
 
-   # print(request_data[439, 493])  
-
-    predict_fn = tf.contrib.predictor.from_saved_model(export_model_path+model_id)
+    model_location = model_dir + export_model_path + model_id
+    print("load trained model from location: ", model_location)
+    predict_fn = tf.contrib.predictor.from_saved_model(model_location)
     predictions = predict_fn({"input": request_data})
     prediction_label = predictions['dense_1'].argmax(axis=-1)
     print(predictions)

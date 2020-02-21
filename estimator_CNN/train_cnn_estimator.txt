@@ -31,4 +31,4 @@ python -m cnn_estimator_task --model_version=cnn_3 --output_dir=cnnmodel_3_dir -
 # tensorboard --host 127.0.0.1 --logdir=cnnmodel_3_dir
 
 # This will be moved to docker container soon
-python -m cnn_estimator_predict --model_id=1581127602
+python -m cnn_estimator_predict --model_id=1581990741 --model_dir=cnnmodel_3_dir
