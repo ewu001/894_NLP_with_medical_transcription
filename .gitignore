@@ -697,3 +697,52 @@ estimator_Attention/attention_lstm_dir/model.ckpt-800.meta
 estimator_Attention/attention_lstm_dir/model.ckpt-850.data-00000-of-00001
 estimator_Attention/attention_lstm_dir/model.ckpt-850.index
 estimator_Attention/attention_lstm_dir/model.ckpt-850.meta
+estimator_LSTM/lstmmd_dir/checkpoint
+estimator_LSTM/lstmmd_dir/eval/events.out.tfevents.1582295234.LAPTOP-42K07IEA
+estimator_LSTM/lstmmd_dir/events.out.tfevents.1582295172.LAPTOP-42K07IEA
+estimator_LSTM/lstmmd_dir/export/exporter/1582298175/saved_model.pb
+estimator_LSTM/lstmmd_dir/export/exporter/1582298175/variables/variables.data-00000-of-00001
+estimator_LSTM/lstmmd_dir/export/exporter/1582298175/variables/variables.index
+estimator_LSTM/lstmmd_dir/export/exporter/1582298273/saved_model.pb
+estimator_LSTM/lstmmd_dir/export/exporter/1582298273/variables/variables.data-00000-of-00001
+estimator_LSTM/lstmmd_dir/export/exporter/1582298273/variables/variables.index
+estimator_LSTM/lstmmd_dir/export/exporter/1582298369/saved_model.pb
+estimator_LSTM/lstmmd_dir/export/exporter/1582298369/variables/variables.data-00000-of-00001
+estimator_LSTM/lstmmd_dir/export/exporter/1582298369/variables/variables.index
+estimator_LSTM/lstmmd_dir/export/exporter/1582298462/saved_model.pb
+estimator_LSTM/lstmmd_dir/export/exporter/1582298462/variables/variables.data-00000-of-00001
+estimator_LSTM/lstmmd_dir/export/exporter/1582298462/variables/variables.index
+estimator_LSTM/lstmmd_dir/export/exporter/1582298534/saved_model.pb
+estimator_LSTM/lstmmd_dir/export/exporter/1582298534/variables/variables.data-00000-of-00001
+estimator_LSTM/lstmmd_dir/export/exporter/1582298534/variables/variables.index
+estimator_LSTM/lstmmd_dir/graph.pbtxt
+estimator_LSTM/lstmmd_dir/keras/checkpoint
+estimator_LSTM/lstmmd_dir/keras/keras_model.ckpt.data-00000-of-00001
+estimator_LSTM/lstmmd_dir/keras/keras_model.ckpt.index
+estimator_LSTM/lstmmd_dir/keras/keras_model.ckpt.meta
+estimator_LSTM/lstmmd_dir/model.ckpt-1000.data-00000-of-00001
+estimator_LSTM/lstmmd_dir/model.ckpt-1000.index
+estimator_LSTM/lstmmd_dir/model.ckpt-1000.meta
+estimator_LSTM/lstmmd_dir/model.ckpt-1050.data-00000-of-00001
+estimator_LSTM/lstmmd_dir/model.ckpt-1050.index
+estimator_LSTM/lstmmd_dir/model.ckpt-1050.meta
+estimator_LSTM/lstmmd_dir/model.ckpt-850.data-00000-of-00001
+estimator_LSTM/lstmmd_dir/model.ckpt-850.index
+estimator_LSTM/lstmmd_dir/model.ckpt-850.meta
+estimator_LSTM/lstmmd_dir/model.ckpt-900.data-00000-of-00001
+estimator_LSTM/lstmmd_dir/model.ckpt-900.index
+estimator_LSTM/lstmmd_dir/model.ckpt-900.meta
+estimator_LSTM/lstmmd_dir/model.ckpt-950.data-00000-of-00001
+estimator_LSTM/lstmmd_dir/model.ckpt-950.index
+estimator_LSTM/lstmmd_dir/model.ckpt-950.meta
+estimator_LSTM/training log/train_estimator_log_0220_0017.txt
+estimator_LSTM/training log/train_estimator_log_0220_0020.txt
+estimator_LSTM/training log/train_estimator_log_0220_0835.txt
+estimator_LSTM/training log/train_estimator_log_0220_0836.txt
+estimator_LSTM/training log/train_estimator_log_0220_0838.txt
+estimator_LSTM/training log/train_estimator_log_0220_0842.txt
+estimator_LSTM/training log/train_estimator_log_0221_0048.txt
+estimator_LSTM/training log/train_estimator_log_0221_0917.txt
+estimator_LSTM/training log/train_estimator_log_0221_0921.txt
+estimator_LSTM/training log/train_estimator_log_0221_0923.txt
+estimator_LSTM/training log/train_estimator_log_0221_0924.txt
