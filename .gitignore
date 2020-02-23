@@ -818,3 +818,92 @@ estimator_LSTM/lstmmd_dir/model.ckpt-292.index
 estimator_LSTM/lstmmd_dir/model.ckpt-292.meta
 estimator_LSTM/training log/train_estimator_log_0223_1119.txt
 estimator_LSTM/training log/train_estimator_log_0223_1130.txt
+estimator_RNN/grummd_dir/checkpoint
+estimator_RNN/grummd_dir/eval/events.out.tfevents.1582475582.LAPTOP-42K07IEA
+estimator_RNN/grummd_dir/events.out.tfevents.1582475493.LAPTOP-42K07IEA
+estimator_RNN/grummd_dir/export/exporter/1582475664/saved_model.pb
+estimator_RNN/grummd_dir/export/exporter/1582475664/variables/variables.data-00000-of-00001
+estimator_RNN/grummd_dir/export/exporter/1582475664/variables/variables.index
+estimator_RNN/grummd_dir/export/exporter/1582475749/saved_model.pb
+estimator_RNN/grummd_dir/export/exporter/1582475749/variables/variables.data-00000-of-00001
+estimator_RNN/grummd_dir/export/exporter/1582475749/variables/variables.index
+estimator_RNN/grummd_dir/export/exporter/1582475851/saved_model.pb
+estimator_RNN/grummd_dir/export/exporter/1582475851/variables/variables.data-00000-of-00001
+estimator_RNN/grummd_dir/export/exporter/1582475851/variables/variables.index
+estimator_RNN/grummd_dir/export/exporter/1582475952/saved_model.pb
+estimator_RNN/grummd_dir/export/exporter/1582475952/variables/variables.data-00000-of-00001
+estimator_RNN/grummd_dir/export/exporter/1582475952/variables/variables.index
+estimator_RNN/grummd_dir/export/exporter/1582476043/saved_model.pb
+estimator_RNN/grummd_dir/export/exporter/1582476043/variables/variables.data-00000-of-00001
+estimator_RNN/grummd_dir/export/exporter/1582476043/variables/variables.index
+estimator_RNN/grummd_dir/graph.pbtxt
+estimator_RNN/grummd_dir/keras/checkpoint
+estimator_RNN/grummd_dir/keras/keras_model.ckpt.data-00000-of-00001
+estimator_RNN/grummd_dir/keras/keras_model.ckpt.index
+estimator_RNN/grummd_dir/keras/keras_model.ckpt.meta
+estimator_RNN/grummd_dir/model.ckpt-100.data-00000-of-00001
+estimator_RNN/grummd_dir/model.ckpt-100.index
+estimator_RNN/grummd_dir/model.ckpt-100.meta
+estimator_RNN/grummd_dir/model.ckpt-150.data-00000-of-00001
+estimator_RNN/grummd_dir/model.ckpt-150.index
+estimator_RNN/grummd_dir/model.ckpt-150.meta
+estimator_RNN/grummd_dir/model.ckpt-200.data-00000-of-00001
+estimator_RNN/grummd_dir/model.ckpt-200.index
+estimator_RNN/grummd_dir/model.ckpt-200.meta
+estimator_RNN/grummd_dir/model.ckpt-250.data-00000-of-00001
+estimator_RNN/grummd_dir/model.ckpt-250.index
+estimator_RNN/grummd_dir/model.ckpt-250.meta
+estimator_RNN/grummd_dir/model.ckpt-292.data-00000-of-00001
+estimator_RNN/grummd_dir/model.ckpt-292.index
+estimator_RNN/grummd_dir/model.ckpt-292.meta
+estimator_RNN/lstmmd_dir/checkpoint
+estimator_RNN/lstmmd_dir/eval/events.out.tfevents.1582474921.LAPTOP-42K07IEA
+estimator_RNN/lstmmd_dir/events.out.tfevents.1582474801.LAPTOP-42K07IEA
+estimator_RNN/lstmmd_dir/export/exporter/1582475038/saved_model.pb
+estimator_RNN/lstmmd_dir/export/exporter/1582475038/variables/variables.data-00000-of-00001
+estimator_RNN/lstmmd_dir/export/exporter/1582475038/variables/variables.index
+estimator_RNN/lstmmd_dir/export/exporter/1582475127/saved_model.pb
+estimator_RNN/lstmmd_dir/export/exporter/1582475127/variables/variables.data-00000-of-00001
+estimator_RNN/lstmmd_dir/export/exporter/1582475127/variables/variables.index
+estimator_RNN/lstmmd_dir/export/exporter/1582475226/saved_model.pb
+estimator_RNN/lstmmd_dir/export/exporter/1582475226/variables/variables.data-00000-of-00001
+estimator_RNN/lstmmd_dir/export/exporter/1582475226/variables/variables.index
+estimator_RNN/lstmmd_dir/export/exporter/1582475319/saved_model.pb
+estimator_RNN/lstmmd_dir/export/exporter/1582475319/variables/variables.data-00000-of-00001
+estimator_RNN/lstmmd_dir/export/exporter/1582475319/variables/variables.index
+estimator_RNN/lstmmd_dir/export/exporter/1582475397/saved_model.pb
+estimator_RNN/lstmmd_dir/export/exporter/1582475397/variables/variables.data-00000-of-00001
+estimator_RNN/lstmmd_dir/export/exporter/1582475397/variables/variables.index
+estimator_RNN/lstmmd_dir/graph.pbtxt
+estimator_RNN/lstmmd_dir/keras/checkpoint
+estimator_RNN/lstmmd_dir/keras/keras_model.ckpt.data-00000-of-00001
+estimator_RNN/lstmmd_dir/keras/keras_model.ckpt.index
+estimator_RNN/lstmmd_dir/keras/keras_model.ckpt.meta
+estimator_RNN/lstmmd_dir/model.ckpt-100.data-00000-of-00001
+estimator_RNN/lstmmd_dir/model.ckpt-100.index
+estimator_RNN/lstmmd_dir/model.ckpt-100.meta
+estimator_RNN/lstmmd_dir/model.ckpt-150.data-00000-of-00001
+estimator_RNN/lstmmd_dir/model.ckpt-150.index
+estimator_RNN/lstmmd_dir/model.ckpt-150.meta
+estimator_RNN/lstmmd_dir/model.ckpt-200.data-00000-of-00001
+estimator_RNN/lstmmd_dir/model.ckpt-200.index
+estimator_RNN/lstmmd_dir/model.ckpt-200.meta
+estimator_RNN/lstmmd_dir/model.ckpt-250.data-00000-of-00001
+estimator_RNN/lstmmd_dir/model.ckpt-250.index
+estimator_RNN/lstmmd_dir/model.ckpt-250.meta
+estimator_RNN/lstmmd_dir/model.ckpt-292.data-00000-of-00001
+estimator_RNN/lstmmd_dir/model.ckpt-292.index
+estimator_RNN/lstmmd_dir/model.ckpt-292.meta
+estimator_RNN/training log/train_estimator_log_0223_1119.txt
+estimator_RNN/training log/train_estimator_log_0221_0925.txt
+estimator_RNN/training log/train_estimator_log_0221_0924.txt
+estimator_RNN/training log/train_estimator_log_0221_0923.txt
+estimator_RNN/training log/train_estimator_log_0221_0921.txt
+estimator_RNN/training log/train_estimator_log_0221_0917.txt
+estimator_RNN/training log/train_estimator_log_0221_0048.txt
+estimator_RNN/training log/train_estimator_log_0220_0842.txt
+estimator_RNN/training log/train_estimator_log_0220_0838.txt
+estimator_RNN/training log/train_estimator_log_0220_0836.txt
+estimator_RNN/training log/train_estimator_log_0220_0835.txt
+estimator_RNN/training log/train_estimator_log_0220_0020.txt
+estimator_RNN/training log/train_estimator_log_0220_0017.txt

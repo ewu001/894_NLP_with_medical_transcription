@@ -1,0 +1,226 @@
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\keras\initializers.py:119: calling RandomUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\ops\resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\ops\init_ops.py:97: calling GlorotUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\ops\init_ops.py:97: calling Orthogonal.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\ops\init_ops.py:97: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+INFO:tensorflow:Using the Keras model provided.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\ops\math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+INFO:tensorflow:Using config: {'_model_dir': 'grummd_dir', '_tf_random_seed': None, '_save_summary_steps': 50, '_save_checkpoints_steps': 50, '_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 20, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x00000217A6E147B8>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+WARNING:tensorflow:From C:\Users\junsh\Documents\GitHub\MMAI894_deeplearning\estimator_LSTM\lstm_estimator_factory.py:44: The name tf.estimator.inputs is deprecated. Please use tf.compat.v1.estimator.inputs instead.
+
+WARNING:tensorflow:From C:\Users\junsh\Documents\GitHub\MMAI894_deeplearning\estimator_LSTM\lstm_estimator_factory.py:44: The name tf.estimator.inputs.numpy_input_fn is deprecated. Please use tf.compat.v1.estimator.inputs.numpy_input_fn instead.
+
+INFO:tensorflow:Not using Distribute Coordinator.
+INFO:tensorflow:Running training and evaluation locally (non-distributed).
+INFO:tensorflow:Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps 50 or save_checkpoints_secs None.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\training\training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\inputs\queues\feeding_queue_runner.py:62: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\inputs\queues\feeding_functions.py:500: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Warm-starting with WarmStartSettings: WarmStartSettings(ckpt_to_initialize_from='grummd_dir\\keras\\keras_model.ckpt', vars_to_warm_start='.*', var_name_to_vocab_info={}, var_name_to_prev_var_name={})
+INFO:tensorflow:Warm-starting from: grummd_dir\keras\keras_model.ckpt
+INFO:tensorflow:Warm-starting variables only in TRAINABLE_VARIABLES.
+INFO:tensorflow:Warm-started 11 variables.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py:882: start_queue_runners (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+INFO:tensorflow:Saving checkpoints for 0 into grummd_dir\model.ckpt.
+INFO:tensorflow:loss = 0.71508557, step = 1
+INFO:tensorflow:global_step/sec: 0.646021
+INFO:tensorflow:loss = 0.5320554, step = 21 (30.960 sec)
+INFO:tensorflow:global_step/sec: 0.702294
+INFO:tensorflow:loss = 0.5921736, step = 41 (28.477 sec)
+INFO:tensorflow:Saving checkpoints for 50 into grummd_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-23T11:32:56Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-50
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-23-11:33:01
+INFO:tensorflow:Saving dict for global step 50: acc = 0.666309, auc = 0.7670332, global_step = 50, loss = 0.5670846
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 50: grummd_dir\model.ckpt-50
+WARNING:tensorflow:From C:\Users\junsh\Documents\GitHub\MMAI894_deeplearning\estimator_LSTM\lstm_estimator_factory.py:53: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\saved_model\signature_def_utils_impl.py:201: build_tensor_info (from tensorflow.python.saved_model.utils_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This function will only be available through the v1 compatibility library as tf.compat.v1.saved_model.utils.build_tensor_info or tf.compat.v1.saved_model.build_tensor_info.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-50
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: grummd_dir\export\exporter\temp-b'1582475582'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.512714
+INFO:tensorflow:loss = 0.5183075, step = 61 (39.009 sec)
+INFO:tensorflow:global_step/sec: 0.68407
+INFO:tensorflow:loss = 0.4247887, step = 81 (29.241 sec)
+INFO:tensorflow:Saving checkpoints for 100 into grummd_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-23T11:34:19Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-100
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-23-11:34:24
+INFO:tensorflow:Saving dict for global step 100: acc = 0.7049356, auc = 0.8039422, global_step = 100, loss = 0.53990865
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 100: grummd_dir\model.ckpt-100
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-100
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: grummd_dir\export\exporter\temp-b'1582475664'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.527074
+INFO:tensorflow:loss = 0.48933083, step = 101 (37.940 sec)
+INFO:tensorflow:global_step/sec: 0.687677
+INFO:tensorflow:loss = 0.24800263, step = 121 (29.084 sec)
+INFO:tensorflow:global_step/sec: 0.639754
+INFO:tensorflow:loss = 0.2099584, step = 141 (31.262 sec)
+INFO:tensorflow:Saving checkpoints for 150 into grummd_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-23T11:35:43Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-150
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-23-11:35:49
+INFO:tensorflow:Saving dict for global step 150: acc = 0.80150217, auc = 0.8794001, global_step = 150, loss = 0.44599497
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 150: grummd_dir\model.ckpt-150
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-150
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: grummd_dir\export\exporter\temp-b'1582475749'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.499283
+INFO:tensorflow:loss = 0.2750345, step = 161 (40.057 sec)
+INFO:tensorflow:global_step/sec: 0.625634
+INFO:tensorflow:loss = 0.117572844, step = 181 (31.967 sec)
+INFO:tensorflow:Saving checkpoints for 200 into grummd_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-23T11:37:25Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-23-11:37:31
+INFO:tensorflow:Saving dict for global step 200: acc = 0.84549356, auc = 0.90749615, global_step = 200, loss = 0.4348539
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 200: grummd_dir\model.ckpt-200
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-200
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: grummd_dir\export\exporter\temp-b'1582475851'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.367061
+INFO:tensorflow:loss = 0.21317822, step = 201 (54.487 sec)
+INFO:tensorflow:global_step/sec: 0.570707
+INFO:tensorflow:loss = 0.19018969, step = 221 (35.045 sec)
+INFO:tensorflow:global_step/sec: 0.535806
+INFO:tensorflow:loss = 0.09328182, step = 241 (37.325 sec)
+INFO:tensorflow:Saving checkpoints for 250 into grummd_dir\model.ckpt.
+WARNING:tensorflow:From C:\Users\junsh\AppData\Local\Continuum\anaconda3\lib\site-packages\tensorflow_core\python\training\saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-23T11:39:05Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-250
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-23-11:39:12
+INFO:tensorflow:Saving dict for global step 250: acc = 0.85944206, auc = 0.9142771, global_step = 250, loss = 0.46878833
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 250: grummd_dir\model.ckpt-250
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-250
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: grummd_dir\export\exporter\temp-b'1582475952'\saved_model.pb
+INFO:tensorflow:global_step/sec: 0.419017
+INFO:tensorflow:loss = 0.09401357, step = 261 (47.731 sec)
+INFO:tensorflow:global_step/sec: 0.526839
+INFO:tensorflow:loss = 0.21552601, step = 281 (37.967 sec)
+INFO:tensorflow:Saving checkpoints for 292 into grummd_dir\model.ckpt.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-02-23T11:40:37Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-292
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2020-02-23-11:40:43
+INFO:tensorflow:Saving dict for global step 292: acc = 0.8669528, auc = 0.9213262, global_step = 292, loss = 0.44940323
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 292: grummd_dir\model.ckpt-292
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Signatures INCLUDED in export for Classify: None
+INFO:tensorflow:Signatures INCLUDED in export for Regress: None
+INFO:tensorflow:Signatures INCLUDED in export for Predict: ['serving_default']
+INFO:tensorflow:Signatures INCLUDED in export for Train: None
+INFO:tensorflow:Signatures INCLUDED in export for Eval: None
+INFO:tensorflow:Restoring parameters from grummd_dir\model.ckpt-292
+INFO:tensorflow:Assets added to graph.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: grummd_dir\export\exporter\temp-b'1582476043'\saved_model.pb
+INFO:tensorflow:Loss for final step: 0.09766389.
