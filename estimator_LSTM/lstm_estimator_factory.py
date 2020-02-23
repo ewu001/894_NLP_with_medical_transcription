@@ -54,7 +54,7 @@ def serving_input_fn():
     features = feature_placeholder
     return tf.estimator.export.TensorServingInputReceiver(features, feature_placeholder)
 
-def lstm_estimator(model_dir, config, learning_rate, embedding_dim, word_index=None, embedding_path=None):
+def rnn_estimator(model_version, model_dir, config, learning_rate, dropout_rate, lstm_units, embedding_dim, word_index=None, embedding_path=None):
 
     input_dim = min(len(word_index)+1, VOCAB_SIZE)
 
@@ -65,13 +65,16 @@ def lstm_estimator(model_dir, config, learning_rate, embedding_dim, word_index=N
     else:
         embedding_matrix = None
     
-    lstm_model = lstm_estimator_model.lstm_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, embedding_dim, lstm_units=32,
+    if model_version == 'lstm':
+        rnn_model = lstm_estimator_model.lstm_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, dropout_rate, embedding_dim, lstm_units,
+                                embedding=embedding_matrix, word_index=word_index)
+    elif model_version == 'gru':
+        rnn_model = lstm_estimator_model.GRU_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, dropout_rate, embedding_dim, lstm_units,
                                 embedding=embedding_matrix, word_index=word_index)
 
-
     adamOptimizer = tf.keras.optimizers.Adam(lr=learning_rate)
-    lstm_model.compile(optimizer=adamOptimizer, loss='binary_crossentropy', clipnorm=1.0, metrics=['acc', tf.keras.metrics.AUC()])
-    estimator = tf.keras.estimator.model_to_estimator(keras_model=lstm_model, model_dir=model_dir, config=config)
+    rnn_model.compile(optimizer=adamOptimizer, loss='binary_crossentropy', clipnorm=1.0, metrics=['acc', tf.keras.metrics.AUC()])
+    estimator = tf.keras.estimator.model_to_estimator(keras_model=rnn_model, model_dir=model_dir, config=config)
     return estimator
 
 def train_and_evaluate(output_dir, hparams):
@@ -101,8 +104,10 @@ def train_and_evaluate(output_dir, hparams):
                                         log_step_count_steps = 20,
                                         save_summary_steps = 50
                                     )
-    estimator = lstm_estimator(output_dir, run_config,
+    estimator = rnn_estimator(hparams['model_version'], output_dir, run_config,
                                 hparams['learning_rate'],
+                                hparams['dropout_rate'],
+                                hparams['rnn_units'],
                                 EMBEDDING_DIM,
                                 word_index=tokenizer.word_index,
                                 embedding_path=hparams['embedding_path'])
