@@ -10,7 +10,7 @@ import datetime
 import keras
 import pickle
 
-import lstm_estimator_model
+import rnn_estimator_model
 import utility
 
 
@@ -66,10 +66,10 @@ def rnn_estimator(model_version, model_dir, config, learning_rate, dropout_rate,
         embedding_matrix = None
     
     if model_version == 'lstm':
-        rnn_model = lstm_estimator_model.lstm_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, dropout_rate, embedding_dim, lstm_units,
+        rnn_model = rnn_estimator_model.lstm_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, dropout_rate, embedding_dim, lstm_units,
                                 embedding=embedding_matrix, word_index=word_index)
     elif model_version == 'gru':
-        rnn_model = lstm_estimator_model.GRU_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, dropout_rate, embedding_dim, lstm_units,
+        rnn_model = rnn_estimator_model.GRU_model(input_dim, MAX_SEQUENCE_LENGTH, learning_rate, dropout_rate, embedding_dim, lstm_units,
                                 embedding=embedding_matrix, word_index=word_index)
 
     adamOptimizer = tf.keras.optimizers.Adam(lr=learning_rate)

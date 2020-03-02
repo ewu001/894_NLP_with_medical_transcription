@@ -907,3 +907,20 @@ estimator_RNN/training log/train_estimator_log_0220_0836.txt
 estimator_RNN/training log/train_estimator_log_0220_0835.txt
 estimator_RNN/training log/train_estimator_log_0220_0020.txt
 estimator_RNN/training log/train_estimator_log_0220_0017.txt
+estimator_RNN/lstmmd_dir/eval/events.out.tfevents.1583110258.LAPTOP-42K07IEA
+estimator_RNN/lstmmd_dir/events.out.tfevents.1583110182.LAPTOP-42K07IEA
+estimator_RNN/lstmmd_dir/export/exporter/1583110353/saved_model.pb
+estimator_RNN/lstmmd_dir/export/exporter/1583110353/variables/variables.data-00000-of-00001
+estimator_RNN/lstmmd_dir/export/exporter/1583110353/variables/variables.index
+estimator_RNN/lstmmd_dir/export/exporter/1583110444/saved_model.pb
+estimator_RNN/lstmmd_dir/export/exporter/1583110444/variables/variables.data-00000-of-00001
+estimator_RNN/lstmmd_dir/export/exporter/1583110444/variables/variables.index
+estimator_RNN/lstmmd_dir/export/exporter/1583110526/saved_model.pb
+estimator_RNN/lstmmd_dir/export/exporter/1583110526/variables/variables.data-00000-of-00001
+estimator_RNN/lstmmd_dir/export/exporter/1583110526/variables/variables.index
+estimator_RNN/lstmmd_dir/export/exporter/1583110609/saved_model.pb
+estimator_RNN/lstmmd_dir/export/exporter/1583110609/variables/variables.data-00000-of-00001
+estimator_RNN/lstmmd_dir/export/exporter/1583110609/variables/variables.index
+estimator_RNN/lstmmd_dir/export/exporter/1583110687/saved_model.pb
+estimator_RNN/lstmmd_dir/export/exporter/1583110687/variables/variables.data-00000-of-00001
+estimator_RNN/lstmmd_dir/export/exporter/1583110687/variables/variables.index

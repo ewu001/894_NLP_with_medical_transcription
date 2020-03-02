@@ -1,5 +1,5 @@
 import argparse
-import lstm_estimator_factory
+import rnn_estimator_factory
 import tempfile
 
 if __name__ == '__main__':
@@ -72,10 +72,10 @@ if __name__ == '__main__':
     hparams = args.__dict__
     output_dir = hparams.pop('output_dir')
 
-    lstm_estimator_factory.MAX_SEQUENCE_LENGTH = hparams.pop('max_sequence_length')
-    lstm_estimator_factory.VOCAB_SIZE= hparams.pop('vocab_size')
-    lstm_estimator_factory.EMBEDDING_DIM= hparams.pop('embedding_dim')
+    rnn_estimator_factory.MAX_SEQUENCE_LENGTH = hparams.pop('max_sequence_length')
+    rnn_estimator_factory.VOCAB_SIZE= hparams.pop('vocab_size')
+    rnn_estimator_factory.EMBEDDING_DIM= hparams.pop('embedding_dim')
     
 
     # Initialize the training and evaluation
-    lstm_estimator_factory.train_and_evaluate(output_dir, hparams)
+    rnn_estimator_factory.train_and_evaluate(output_dir, hparams)
