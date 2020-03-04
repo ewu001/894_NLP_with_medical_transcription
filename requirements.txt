@@ -24,6 +24,4 @@ tensorflow-base=1.15.0=mkl_py37h190a33d_0
 tensorflow-estimator=2.0.1=pypi_0
 tensorflow-hub=0.7.0=pyhe1b5a44_0
 tf-estimator-nightly=1.14.0.dev2019030115=pypi_0
-torch=1.3.1+cu92=pypi_0
-torchvision=0.4.2+cu92=pypi_0
-yaml=0.1.7=hc54c509_2
+
